@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
 .row-about-me .kolumn-about-me a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: #4E9983;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(69, 189, 138);
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 50px;
   padding: 50px;
   text-align: center;
-  color: #B3721C;
+  color: rgb(179, 114, 28);
+}
+
+.section-portfolio .title-portfolio, .skills .title-skills {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  text-align: justify;
+  font-size: 20px;
+  padding-bottom: 60px;
 }
 
 *, ::after, ::before {
@@ -21,6 +30,7 @@ h2 {
 
 body {
   font-family: Outfit, Verdana, Tahoma, sans-serif;
+  line-height: 30px;
 }
 
 .nav-menu {
@@ -73,7 +83,7 @@ body {
   margin: 0 auto;
 }
 .global-home .home h1 {
-  color: #A77155;
+  color: rgb(167, 113, 85);
   font-size: clamp(30px, 7vw, 70px);
   font-weight: 1000;
   line-height: 1.5;
@@ -116,7 +126,7 @@ body {
   width: 12px;
   height: 12px;
   margin: 15px;
-  fill: #B3721C;
+  fill: rgb(179, 114, 28);
   transition: transform 0.3s ease;
 }
 .global-home .dots .dot:hover {
@@ -145,7 +155,7 @@ body {
 
 .row-about-me {
   margin: 0 auto;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   width: 70%;
   display: flex;
   justify-content: space-between;
@@ -196,14 +206,29 @@ body {
   width: 100%;
   background-color: rgba(179, 114, 28, 0.3);
 }
-.skills .title-skills {
-  display: block;
-  margin: 0 auto;
-  width: 70%;
+.skills .title-skills span {
+  color: rgb(69, 189, 138);
+  font-weight: 600;
+  font-size: 25px;
 }
-.skills .title-skills p {
-  font-size: 20px;
-  text-align: justify;
+.skills .my-skills-img {
+  background-image: url(img/fond2.jpg);
+  background-attachment: fixed;
+  height: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.skills .my-skills-img .img-skills {
+  text-align: center;
+}
+.skills .my-skills-img p {
+  font-size: 25px;
+  font-weight: 800;
+  color: rgb(106, 207, 177);
+  text-align: center;
+  padding-bottom: 10px;
 }
 .skills .box-skills {
   width: 50%;
@@ -215,7 +240,7 @@ body {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 .skills .box-skills .list-skills .item-skills {
   margin: 20px;
@@ -241,28 +266,19 @@ body {
 .section-portfolio {
   background-color: rgba(179, 114, 28, 0.3);
 }
-.section-portfolio .title-portfolio {
-  display: block;
-  margin: 0 auto;
-  width: 70%;
-  text-align: justify;
-  font-size: 20px;
-  padding-bottom: 80px;
-}
-
 .box-portfolio {
   width: 70%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   margin: 0 auto;
 }
 .box-portfolio .cartes-portfolio {
   position: relative;
   width: 300px;
   margin: 30px;
-  box-shadow: 0px 3px 5px rgba(2, 1, 95, 0.986);
+  box-shadow: 0px 3px 5px #082E4B;
 }
 .box-portfolio .cartes-portfolio .carte-overlay {
   position: absolute;
@@ -303,6 +319,7 @@ body {
 }
 .box-portfolio .cartes-portfolio .txt-portfolio p {
   padding: 5px;
+  line-height: 20px;
 }
 
 .cartes-portfolio:hover .carte-overlay {
@@ -358,16 +375,24 @@ body {
 .box-contact {
   background-color: rgba(179, 114, 28, 0.3);
 }
-.box-contact p {
-  font-size: 20px;
-  text-align: center;
-}
 
-.box-formular .form {
-  width: 100%;
-  max-width: 600px;
+.box-formular {
+  display: flex;
+  width: 70%;
   margin: 0 auto;
+}
+.box-formular .form {
+  width: 50%;
+  max-width: 600px;
   background-color: #4E9983;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+.box-formular .form h3 {
+  text-align: center;
+  padding-top: 5px;
+  color: rgb(9, 29, 51);
 }
 .box-formular .form .form-row {
   display: flex;
@@ -379,21 +404,32 @@ body {
 }
 .box-formular .form .form-row .form-group label {
   display: block;
-  margin-bottom: 5px;
 }
 .box-formular .form .form-row .form-group input,
 .box-formular .form .form-row .form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 10px;
   margin-top: 5px;
+  font-family: Ouitfit, Verdana, Geneva, Tahoma, sans-serif;
+}
+.box-formular .form .form-row .form-group textarea {
+  height: 100px;
+}
+.box-formular .form p {
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  margin-left: 10px;
+  color: rgb(9, 29, 51);
 }
 .box-formular .form button[type=submit] {
   display: block;
   margin: 10px;
   padding: 10px;
-  color: white;
+  color: rgb(206, 241, 241);
+  text-transform: uppercase;
   cursor: pointer;
   background: rgb(2, 34, 24);
   background: linear-gradient(0deg, rgb(2, 34, 24) 12%, rgb(50, 153, 122) 100%);
@@ -402,6 +438,47 @@ body {
   cursor: pointer;
   flex-grow: 1;
   width: calc(100% - 20px);
+}
+.box-formular .logo-contact {
+  width: 50%;
+}
+.box-formular .logo-contact h4 {
+  padding-bottom: 60px;
+  font-size: 20px;
+  text-align: justify;
+  color: rgb(9, 29, 51);
+  margin-left: 30px;
+}
+.box-formular .logo-contact .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-formular .logo-contact .contact-reseau {
+  margin-left: 20px;
+  text-decoration: none;
+}
+.box-formular .logo-contact .contact-reseau img {
+  width: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .box-formular {
+    flex-direction: column;
+  }
+  .box-formular .form {
+    width: 100%;
+  }
+  .box-formular .logo-contact {
+    width: 100%;
+  }
+}
+footer {
+  height: 50px;
+  background-color: rgb(9, 29, 51);
+  color: rgb(106, 207, 177);
+  text-align: center;
+  line-height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,14 +1,23 @@
 %lien {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: 	#4E9983;
+    font-size: 20px;
+    font-weight: 600;
+    color: $important-text;
 }
 
 
-%titleH2{
-    font-size: 40px;
+%title-H2{
+    font-size: 50px;
     padding: 50px;
     text-align: center;
     color: $subtitle-color;
+}
+
+%title-p{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    text-align: justify;
+    font-size: 20px;
+    padding-bottom: 60px;
 }
