@@ -270,6 +270,7 @@ body {
   height: 180px;
   background-color: rgba(179, 114, 28, 0.5019607843);
   opacity: 0.8;
+  transition: background-color 0.3s ease;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -362,68 +363,45 @@ body {
   text-align: center;
 }
 
-.box-formular {
-  padding-top: 80px;
+.box-formular .form {
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-.box-formular form {
+  max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.left {
-  width: 400px;
   background-color: #4E9983;
-  border-radius: 5px;
 }
-.left h3 {
-  text-align: center;
+.box-formular .form .form-row {
+  display: flex;
+  justify-content: space-between;
 }
-
-.form-contact {
-  width: 100%;
-  font-size: 20px;
+.box-formular .form .form-row .form-group {
+  flex: 1;
+  margin: 10px;
 }
-.form-contact input, .form-contact textarea {
+.box-formular .form .form-row .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.box-formular .form .form-row .form-group input,
+.box-formular .form .form-row .form-group textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 5px;
 }
-.form-contact textarea {
-  height: 200px;
-}
-.form-contact input {
-  height: 35px;
-}
-.form-contact .submit-btn {
+.box-formular .form button[type=submit] {
+  display: block;
+  margin: 10px;
+  padding: 10px;
   color: white;
   cursor: pointer;
   background: rgb(2, 34, 24);
   background: linear-gradient(0deg, rgb(2, 34, 24) 12%, rgb(50, 153, 122) 100%);
-}
-
-.right h4 {
-  padding-bottom: 80px;
-  font-size: 30px;
-}
-.right .contact-reseau {
-  padding: 20px;
-  text-decoration: none;
-}
-.right .contact-reseau img {
-  width: 55px;
-}
-
-@media screen and (max-width: 850px) {
-  .box-formular {
-    display: flex;
-    flex-direction: column;
-  }
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-grow: 1;
+  width: calc(100% - 20px);
 }
 
 /*# sourceMappingURL=style.css.map */
