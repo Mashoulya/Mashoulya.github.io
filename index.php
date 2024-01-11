@@ -39,13 +39,8 @@
  </div>
 
  </div>
-      
-
-
        
 </div>
-
-
 
     <!-- profil -->    
       
@@ -66,8 +61,6 @@
          </div>
      </div>
   
-
-
     <!-- Compétences -->
 
     <div class="skills">
@@ -226,22 +219,46 @@
 
     <!-- Contact -->
 
+    <?php
+
+    if(!empty($_POST["send"])){
+        $lastName = $_POST["lastName"];
+        $firstName = $_POST["firstName"];
+        $email = $_POST["email"];
+        $tel = $_POST["tel"];
+        $message = $_POST["message"];
+        $toEmail = "maria.ib2105@gmail.com";
+
+        $mailHeaders = "Name: " . $lastName . " " .$firstName .
+        "\r\n Email: " . $email .
+        "\r\n Tél: " . $tel .
+        "\r\n Message: " . $message . "\r\n";
+
+        if(mail($toEmail, $lastName, $firstName, $mailHeaders)){
+            $message = "Votre message est envoyé avec succès!";
+        }
+    }
+
+
+
+?>
+
   <div class="box-contact">     
      
         <h2 id="my-contact">Contact</h2>
   
     <div class="box-formular">
 
-       <form class="form">
+       <form method="POST" class="form">
         <h3>Vous avez une question?</h3>
         <div class="form-row">
           <div class="form-group">
-            <label for="last-name"></label>
-            <input type="text" id="last-name" name="name" placeholder="Nom*" required>
+            <label for="lastName"></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Nom*" required>
           </div>
           <div class="form-group">
-            <label for="first-name"></label>
-            <input type="text" id="first-name" name="f-name" placeholder="Prénom*" required>
+            <label for="firstName"></label>
+            <input type="text" id="firstName" name="firstName" placeholder="Prénom*" required>
           </div>
         </div>
         <div class="form-row">
@@ -261,9 +278,13 @@
           </div>
         </div>
         <p>*Champs obligatoires</p>
-        <button type="submit">Envoyer</button>
+        <input type="submit" name="send" value="Envoyer">
+        <?php if(!empty($message)){ ?>
+          <div class="success">
+            <strong><?php echo $message; ?> </strong>
+          </div>
+        <?php } ?>
       </form>
-      
       
       <div class="logo-contact">
         
