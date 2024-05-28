@@ -235,11 +235,9 @@
         "\r\n Message: " . $message . "\r\n";
 
         if(mail($toEmail, $lastName, $firstName, $mailHeaders)){
-            $message = "Votre message est envoyé avec succès!";
+            $msg = "Votre message est envoyé avec succès!";
         }
     }
-
-
 
 ?>
 
@@ -281,7 +279,7 @@
         <input type="submit" name="send" value="Envoyer">
         <?php if(!empty($message)){ ?>
           <div class="success">
-            <strong><?php echo $message; ?> </strong>
+            <strong><?php echo $msg; ?> </strong>
           </div>
         <?php } ?>
       </form>
