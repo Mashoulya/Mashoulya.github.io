@@ -16,7 +16,6 @@
         <a href="#home">Accueil</a>
         <a href="#about">A propos</a>
         <a href="#my-skills">Compétences</a>
-        <a href="#my-services">Services</a>
         <a href="#my-portfolio">Portfolio</a>
         <a href="#my-contact">Contact</a>
     </nav>
@@ -157,20 +156,6 @@
        
    </div>
 
-  </div>
-
-  <!-- Services proposés -->
-
-  <div class="services">
-    <h2 id="my-services">Services proposés</h2>
-    <p>Voici les services que je propose :</p>
-      <ul>
-        <li>Développement de sites web</li>
-        <li>Conception de design adaptatif</li>
-        <li>Développement front-end et back-end</li>
-        <li>Optimisation des performances</li>
-        <li>Consultation technique</li>
-      </ul>
   </div>
 
     <!-- Portfolio -->
