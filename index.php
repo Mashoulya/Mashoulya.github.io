@@ -15,7 +15,7 @@
     <nav class="nav-menu"id="home">
         <a href="#home">Accueil</a>
         <a href="#about">A propos</a>
-        <a href="#my-skills">Compétences</a>
+        <a href="#my-skills">Sérvices</a>
         <a href="#my-portfolio">Portfolio</a>
         <a href="#my-contact">Contact</a>
     </nav>
@@ -64,7 +64,7 @@
 
     <div class="skills">
       
-      <h2 class="" id="my-skills">Compétences</h2>
+      <h2 class="" id="my-skills">Sérvices</h2>
 
       <div class="my-skills-img">
         <div class="img-skills">
