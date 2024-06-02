@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link rel="stylesheet" href="style.css">
-    
+</head>    
 <body>
 
     <!-- navbar -->
@@ -44,7 +44,6 @@
 </div>
 
     <!-- profil -->    
-      
     
      <div class="box-about-me">
       <h2 class="" id="about">A propos de moi</h2>  
@@ -162,8 +161,16 @@
 
   <!-- Services proposés -->
 
-  <div classe="services">
+  <div class="services">
     <h2 id="my-services">Services proposés</h2>
+    <p>Voici les services que je propose :</p>
+      <ul>
+        <li>Développement de sites web</li>
+        <li>Conception de design adaptatif</li>
+        <li>Développement front-end et back-end</li>
+        <li>Optimisation des performances</li>
+        <li>Consultation technique</li>
+      </ul>
   </div>
 
     <!-- Portfolio -->
