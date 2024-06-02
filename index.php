@@ -16,6 +16,7 @@
         <a href="#home">Accueil</a>
         <a href="#about">A propos</a>
         <a href="#my-skills">Compétences</a>
+        <a href="#my-services">Services</a>
         <a href="#my-portfolio">Portfolio</a>
         <a href="#my-contact">Contact</a>
     </nav>
@@ -159,9 +160,13 @@
 
   </div>
 
+  <!-- Services proposés -->
+
+  <div classe="services">
+    <h2 id="my-services">Services proposés</h2>
+  </div>
 
     <!-- Portfolio -->
-
 
       <section class="section-portfolio">
         
