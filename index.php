@@ -87,7 +87,7 @@
       </div>
       
       
-      <p class="title-skills">ZZZZ En tant que développeuse full-stack, je possède les compétences pour travailler sur les deux aspects d'un projet de développement web, à savoir <span>le front-end</span> et <span>le back-end.</span> Cela implique que je suis en mesure de concevoir et de développer l'interface utilisateur d'un site web ou d'une application ainsi que la logique et la gestion de la base de données. De plus, je suis compétente pour créer des sites web avec un design qui s'adapte à tous les appareils. Cela signifie que je peux concevoir et développer des interfaces utilisateur qui se redimensionnent automatiquement en fonction de la taille d'écran de l'utilisateur, que ce soit sur des ordinateurs de bureau, des tablettes ou des smartphones.</p>
+      <p class="title-skills">En tant que développeuse full-stack, je possède les compétences pour travailler sur les deux aspects d'un projet de développement web, à savoir <span>le front-end</span> et <span>le back-end.</span> Cela implique que je suis en mesure de concevoir et de développer l'interface utilisateur d'un site web ou d'une application ainsi que la logique et la gestion de la base de données. De plus, je suis compétente pour créer des sites web avec un design qui s'adapte à tous les appareils. Cela signifie que je peux concevoir et développer des interfaces utilisateur qui se redimensionnent automatiquement en fonction de la taille d'écran de l'utilisateur, que ce soit sur des ordinateurs de bureau, des tablettes ou des smartphones.</p>
       
       <div class="box-skills">
         
