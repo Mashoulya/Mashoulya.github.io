@@ -13,7 +13,7 @@ h2 {
   color: rgb(179, 114, 28);
 }
 
-.section-portfolio .title-portfolio, .skills .title-skills {
+.section-portfolio .title-portfolio, .title-skills {
   display: block;
   margin: 0 auto;
   width: 70%;
@@ -209,16 +209,10 @@ body p {
     padding-bottom: 30px;
   }
 }
-.skills {
+.services {
   width: 100%;
-  background-color: rgba(179, 114, 28, 0.3);
 }
-.skills .title-skills span {
-  color: rgb(69, 189, 138);
-  font-weight: 600;
-  font-size: 25px;
-}
-.skills .my-skills-img {
+.services .my-skills-img {
   background-image: url(img/fond2.jpg);
   background-attachment: fixed;
   height: 350px;
@@ -227,35 +221,46 @@ body p {
   align-items: center;
   margin-bottom: 60px;
 }
-.skills .my-skills-img .img-skills {
+.services .my-skills-img .img-skills {
   text-align: center;
 }
-.skills .box-skills {
+.services .myServices {
+  display: flex;
+  margin: 0 auto;
+}
+
+.title-skills span {
+  color: rgb(69, 189, 138);
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.box-skills {
   width: 50%;
   display: flex;
   margin: 0 auto;
 }
-.skills .box-skills .list-skills {
+.box-skills .list-skills {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   padding-bottom: 60px;
 }
-.skills .box-skills .list-skills .item-skills {
+.box-skills .list-skills .item-skills {
   margin: 20px;
   text-align: center;
   width: 75px;
   transition: transform 0.2s ease;
 }
-.skills .box-skills .list-skills .item-skills:hover {
+.box-skills .list-skills .item-skills:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
-.skills .box-skills .list-skills .item-skills img {
+.box-skills .list-skills .item-skills img {
   width: 100%;
 }
-.skills .box-skills .list-skills .item-skills p {
+.box-skills .list-skills .item-skills p {
   text-align: center;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;

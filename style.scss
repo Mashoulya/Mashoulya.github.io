@@ -217,17 +217,9 @@ h2{
 
 // Compétences//
 
-.skills{
+.services{
     width: 100%;
-    background-color: $fond-color;
-    .title-skills{
-      @extend %title-p;
-      span{
-        color: $important-text;
-        font-weight: 600;
-        font-size: 25px;
-      }
-    }
+    
     .my-skills-img{
         background-image: url(img/fond2.jpg);
         background-attachment: fixed;
@@ -239,7 +231,20 @@ h2{
         .img-skills{
             text-align: center;           
         }
-        
+    }
+    .myServices{
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+    .title-skills{
+      @extend %title-p;
+      span{
+        color: $important-text;
+        font-weight: 600;
+        font-size: 25px;
+      }
     }
     .box-skills{
      width: 50%;
@@ -276,7 +281,7 @@ h2{
     }
  }
 
-}
+
 
 
 // Portfolio//
