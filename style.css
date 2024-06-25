@@ -32,6 +32,13 @@ body {
   font-family: Outfit, Verdana, Tahoma, sans-serif;
   line-height: 30px;
 }
+body p {
+  font-size: 25px;
+  font-weight: 800;
+  color: rgb(106, 207, 177);
+  text-align: center;
+  padding-bottom: 10px;
+}
 
 .nav-menu {
   width: 100%;
@@ -222,13 +229,6 @@ body {
 }
 .skills .my-skills-img .img-skills {
   text-align: center;
-}
-.skills .my-skills-img p {
-  font-size: 25px;
-  font-weight: 800;
-  color: rgb(106, 207, 177);
-  text-align: center;
-  padding-bottom: 10px;
 }
 .skills .box-skills {
   width: 50%;

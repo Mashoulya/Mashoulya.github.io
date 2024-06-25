@@ -11,6 +11,13 @@
 body{
     font-family: Outfit, Verdana, Tahoma, sans-serif;
     line-height: 30px;
+    p{
+        font-size: 25px;
+        font-weight: 800;
+        color: $another-title;
+        text-align: center;
+        padding-bottom: 10px;
+    }
 }
 
 h2{
@@ -232,13 +239,7 @@ h2{
         .img-skills{
             text-align: center;           
         }
-        p{
-            font-size: 25px;
-            font-weight: 800;
-            color: $another-title;
-            text-align: center;
-            padding-bottom: 10px;
-        }
+        
     }
     .box-skills{
      width: 50%;
@@ -276,6 +277,7 @@ h2{
  }
 
 }
+
 
 // Portfolio//
 
