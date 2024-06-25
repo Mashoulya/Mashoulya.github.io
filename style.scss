@@ -9,19 +9,17 @@
 }
 
 body{
+    width: 100%;
     font-family: Outfit, Verdana, Tahoma, sans-serif;
     line-height: 30px;
+    background-color: $fond-color;
     p{
-        font-size: 25px;
-        font-weight: 800;
-        color: $another-title;
-        text-align: center;
-        padding-bottom: 10px;
+        @extend %text-p;
     }
 }
 
 h2{
-    @extend %title-H2
+    @extend %title-H2;
 }
 
 .nav-menu{
@@ -149,7 +147,6 @@ h2{
 // A propos de moi//
 
 .box-about-me{
-    background-color: $fond-color;
     width: 100%;
 }
 
@@ -215,7 +212,7 @@ h2{
 
 
 
-// Compétences//
+// Sérvices//
 
 .services{
     width: 100%;
@@ -229,22 +226,25 @@ h2{
         align-items: center;
         margin-bottom: 60px;
         .img-skills{
-            text-align: center;           
+            text-align: center;
+            p{
+                color: $another-title;
+                font-size: 25px;
+                font-weight: 800;
+                text-align: center;
+                padding-bottom: 10px;
+            }           
         }
     }
-    .myServices{
-        display: flex;
-        margin: 0 auto;
-    }
+    
 }
 
-    .title-skills{
-      @extend %title-p;
-      span{
-        color: $important-text;
-        font-weight: 600;
-        font-size: 25px;
-      }
+// Compétences
+.compet{
+    width: 100%;
+    p{
+        width: 70%;
+        font-size: 20px;
     }
     .box-skills{
      width: 50%;
@@ -280,18 +280,12 @@ h2{
        
     }
  }
-
+}
 
 
 
 // Portfolio//
 
-.section-portfolio{
-    background-color: $fond-color;
-    .title-portfolio{
-        @extend %title-p;
-    }
-}
     .box-portfolio{       
         width: 70%;
         display: flex;
@@ -391,9 +385,7 @@ h2{
 
 
 // Contact
-.box-contact{
-    background-color: $fond-color;
-}
+
 .box-formular{
     display: flex;
     width: 70%;
