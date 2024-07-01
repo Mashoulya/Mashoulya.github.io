@@ -13,9 +13,6 @@ body{
     font-family: Outfit, Verdana, Tahoma, sans-serif;
     line-height: 30px;
     background-color: $fond-color;
-    p{
-        @extend %text-p;
-    }
 }
 
 h2{
@@ -167,7 +164,8 @@ h2{
             color: #0c0c0c;
         }
         a{
-            @extend %lien;
+            @extend %important-p;
+            text-decoration: none;
         }
     }
     .kolumn-my-photo{
@@ -236,7 +234,21 @@ h2{
             }           
         }
     }
-    
+    .myServices{
+        p{
+            text-align: center;
+            color: $important-text;
+            @extend %important-p;
+          
+        }
+        ul{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
 }
 
 // Compétences
