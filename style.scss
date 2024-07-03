@@ -258,6 +258,7 @@ h2{
             box-shadow: 0px 3px 5px hsl(206, 81%, 16%);
             transition: transform 0.3s, box-shadow 0.3s;
             padding: 15px;
+            position: relative;
             p{
                 @extend %important-p;
                 text-align: center;
@@ -265,6 +266,9 @@ h2{
             ul li{
                 list-style:none;
                 text-align: center;
+            }
+            button{
+                margin-top: auto;
             }
         }
         .service-type:hover {
