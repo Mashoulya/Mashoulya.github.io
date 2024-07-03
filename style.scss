@@ -146,7 +146,7 @@ h2{
     width: 70%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items:flex-start;
 .about-me-text{
     padding-bottom: 60px; 
@@ -162,8 +162,9 @@ h2{
         }
     }
     .my-photo{
-        max-width: 100%; /* Обеспечивает, что изображение будет адаптироваться по размеру контейнера */
-        height: auto;
+        .my-photo-img{
+            width: 250px;
+        }
     }
 }
 
@@ -249,21 +250,25 @@ h2{
         }
 }  
 
-// Compétences
+// Technos
+
    h3{
     text-align: center;
     font-size: 30px;
     color: $title-color;
     padding: 50px;
    }
-    .box-skills{
-     width: 50%;
+    .skills{
+     width: 100%;
      display: flex;
-     margin: 0 auto;
-        .item-skills{
+     justify-content: center;
+        .skills-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 20px;
             text-align: center;
-            width: 75px;            
+            width: 50px;            
             img{
                 width: 100%;
             }
@@ -446,29 +451,6 @@ h2{
           width: calc(100% - 20px);
         }
       }
-      
-      .logo-contact{
-        width: 50%;
-        h4{
-           padding-bottom: 60px;
-           font-size: 20px;
-           text-align: justify;
-           color: $main-color;
-           margin-left: 30px;
-        }
-        .logos{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contact-reseau{
-            margin-left: 20px;
-            text-decoration: none;
-            img{
-                width: 50px;
-            }
-        }
-   }
 }
 
 
@@ -476,9 +458,6 @@ h2{
     .box-formular{
         flex-direction: column;
         .form{
-            width: 100%;
-        }
-        .logo-contact{
             width: 100%;
         }
     }

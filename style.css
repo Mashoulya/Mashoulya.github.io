@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
 .services-container .service-type p, .about-me .about-me-text a {
   font-size: 20px;
@@ -145,7 +144,7 @@ body {
   width: 70%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
 }
 .about-me .about-me-text {
@@ -159,9 +158,8 @@ body {
 .about-me .about-me-text a {
   text-decoration: none;
 }
-.about-me .my-photo {
-  max-width: 100%; /* Обеспечивает, что изображение будет адаптироваться по размеру контейнера */
-  height: auto;
+.about-me .my-photo .my-photo-img {
+  width: 250px;
 }
 
 .services-img {
@@ -246,20 +244,23 @@ h3 {
   padding: 50px;
 }
 
-.box-skills {
-  width: 50%;
+.skills {
+  width: 100%;
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
 }
-.box-skills .item-skills {
+.skills .skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
   text-align: center;
-  width: 75px;
+  width: 50px;
 }
-.box-skills .item-skills img {
+.skills .skills-item img {
   width: 100%;
 }
-.box-skills .item-skills p {
+.skills .skills-item p {
   text-align: center;
   font-weight: bold;
   font: 14px;
@@ -435,37 +436,12 @@ h3 {
   flex-grow: 1;
   width: calc(100% - 20px);
 }
-.box-formular .logo-contact {
-  width: 50%;
-}
-.box-formular .logo-contact h4 {
-  padding-bottom: 60px;
-  font-size: 20px;
-  text-align: justify;
-  color: rgb(9, 29, 51);
-  margin-left: 30px;
-}
-.box-formular .logo-contact .logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.box-formular .logo-contact .contact-reseau {
-  margin-left: 20px;
-  text-decoration: none;
-}
-.box-formular .logo-contact .contact-reseau img {
-  width: 50px;
-}
 
 @media screen and (max-width: 800px) {
   .box-formular {
     flex-direction: column;
   }
   .box-formular .form {
-    width: 100%;
-  }
-  .box-formular .logo-contact {
     width: 100%;
   }
 }
