@@ -204,7 +204,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8235294118);
   border: none;
   width: 200px;
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,6 +212,13 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 15px;
   position: relative;
+}
+.services-container .service-type > * {
+  margin-bottom: 20px;
+}
+.services-container .service-type img {
+  width: 50px;
+  height: auto;
 }
 .services-container .service-type p {
   text-align: center;
