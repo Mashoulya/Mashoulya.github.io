@@ -1,5 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
-.services .services-container .service-type p, .row-about-me .kolumn-about-me a {
+.services .services-container .service-type p, .about-me .about-me-text a {
   font-size: 20px;
   font-weight: 600;
   color: rgb(69, 189, 138);
@@ -140,62 +141,30 @@ body {
     margin: 10px;
   }
 }
-.box-about-me {
-  width: 100%;
-}
-
-.row-about-me {
-  margin: 0 auto;
-  padding-bottom: 60px;
+.about-me {
   width: 70%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
-.row-about-me .kolumn-about-me {
-  width: 100%;
+.about-me .about-me-text {
+  padding-bottom: 60px;
+}
+.about-me .about-me-text p {
+  width: 90%;
   text-align: justify;
-  margin-right: 20px;
-}
-.row-about-me .kolumn-about-me p {
-  padding: 10px;
   font-size: 20px;
   color: #0c0c0c;
 }
-.row-about-me .kolumn-about-me a {
+.about-me .about-me-text a {
   text-decoration: none;
 }
-.row-about-me .kolumn-my-photo {
-  width: 20%;
+.about-me .my-photo {
+  max-width: 100%; /* Обеспечивает, что изображение будет адаптироваться по размеру контейнера */
   height: auto;
-  padding-left: 20px;
-}
-.row-about-me .kolumn-my-photo .img-my-photo {
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.6), 0px 0px 0px 14px #fff, 0px 0px 0px 18px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 800px) {
-  .row-about-me {
-    flex-direction: column;
-  }
-  .row-about-me .kolumn-my-photo {
-    width: 30%;
-    height: auto;
-    padding-left: 0px;
-  }
-  .row-about-me .kolumn-about-me {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 967px) {
-  .box-about-me {
-    overflow: auto;
-    padding-bottom: 30px;
-  }
-}
 .services {
   width: 100%;
 }

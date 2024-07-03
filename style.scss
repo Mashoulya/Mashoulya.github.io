@@ -143,23 +143,17 @@ h2{
 
 // A propos de moi//
 
-.box-about-me{
-    width: 100%;
-}
-
-.row-about-me{
-    margin: 0 auto;
-    padding-bottom: 60px;
+.about-me{
     width: 70%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    .kolumn-about-me{
-        width: 100%;
-        text-align: justify;
-        margin-right:20px;
+    align-items:flex-start;
+.about-me-text{
+    padding-bottom: 60px; 
         p{
-            padding: 10px;
+            width: 90%;
+            text-align: justify;
             font-size: 20px;
             color: #0c0c0c;
         }
@@ -168,44 +162,15 @@ h2{
             text-decoration: none;
         }
     }
-    .kolumn-my-photo{
-        width: 20%;
+    .my-photo{
+        max-width: 100%; /* Обеспечивает, что изображение будет адаптироваться по размеру контейнера */
         height: auto;
-        padding-left: 20px;
-        .img-my-photo{
-           max-width: 100%;
-           height: auto;
-
-           box-shadow:           
-           0px 0px 0px 2px rgba(0,0,0,0.6),
-           0px 0px 0px 14px #fff,
-           0px 0px 0px 18px rgba(0,0,0,0.2);
-        }
     }
 }
 
-@media screen and (max-width: 800px){
-    .row-about-me{
-        flex-direction: column;
-        .kolumn-my-photo{
-            width: 30%;
-            height: auto;
-            padding-left: 0px;
-        }
-        .kolumn-about-me{            
-                margin-right: 0;
-                margin-bottom: 10px;
-        }   
+// @media screen and (max-width: 800px){
       
-    }   
-    
-}
-@media screen and (max-width: 967px){
-    .box-about-me{
-       overflow: auto;
-       padding-bottom: 30px;
-    }    
-}
+// } à refaire!!!
 
 
 
