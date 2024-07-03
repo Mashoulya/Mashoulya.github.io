@@ -137,7 +137,6 @@ h2{
             }
         }
     }
-    
 }
 
 
@@ -155,7 +154,7 @@ h2{
             width: 90%;
             text-align: justify;
             font-size: 20px;
-            color: #0c0c0c;
+            // color: #0c0c0c;
         }
         a{
             @extend %important-p;
@@ -174,25 +173,22 @@ h2{
 
 
 
-
 // Sérvices//
 
-.services{
+.services-img{
     width: 100%;
-    
-    .my-skills-img{
-        background-image: url(img/fond2.jpg);
-        background-attachment: fixed;
-        height: 350px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 60px;
-        .img-skills{
+    background-image: url(img/fond2.jpg);
+    background-attachment: fixed;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 60px;
+        .service-img{
             display: flex;
             flex-direction: column;
-           align-items: center;
-            p{
+            align-items: center;
+                p{
                 color: $another-title;
                 font-size: 25px;
                 font-weight: 800;
@@ -201,9 +197,10 @@ h2{
             }           
         }
     }
-    p{
-        font-weight: 600;
+    .service-p{
         text-align: center;
+        font-size: 20px;
+        font-weight: 600;
     }
     .services-container{
         width: 70%;
@@ -234,53 +231,50 @@ h2{
             }
             button{
                 margin-top: auto;
+                border-radius: 5px;
+                padding: 5px;
+                border: 1px solid $btn-color;
+                background-color: white;
+                color: $main-color;
+                font-weight: 600;
+            }
+            button:hover{
+                cursor: pointer;
+                background-color: rgba(179, 114, 28, 0.61);
             }
         }
         .service-type:hover {
             transform: scale(1.05);
             box-shadow: 0 3px 5px hsl(206, 81%, 18%);
         }
-    }  
-}
+}  
 
 // Compétences
-    p{
-        width: 70%;
-        font-size: 20px;
-    }
+   h3{
+    text-align: center;
+    font-size: 30px;
+    color: $title-color;
+    padding: 50px;
+   }
     .box-skills{
      width: 50%;
      display: flex;
      margin: 0 auto;
-        .list-skills{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        padding-bottom: 60px;
         .item-skills{
             margin: 20px;
             text-align: center;
-            width: 75px;
-            transition: transform 0.2s ease;
-            &:hover{
-                transform: scale(1.2);
-                cursor: pointer;
-            }
-            
+            width: 75px;            
             img{
                 width: 100%;
             }
             p{
                 text-align: center;
                 font-weight: bold;
-                font-family: Arial, Helvetica, sans-serif;
                 font: 14px;
                 color: rgb(8, 8, 8);
             }
         }
        
-    }
  }
 
 
