@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
-.services .myServices p, .row-about-me .kolumn-about-me a {
+.row-about-me .kolumn-about-me a {
   font-size: 20px;
   font-weight: 600;
   color: rgb(69, 189, 138);
@@ -218,16 +218,30 @@ body {
   text-align: center;
   padding-bottom: 10px;
 }
-.services .myServices p {
-  text-align: center;
-  color: rgb(69, 189, 138);
-}
-.services .myServices ul {
-  width: 50%;
+.services .services-container {
+  width: 70%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.services .services-container .service-type {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 250px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.services .services-container .service-type:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .compet {
