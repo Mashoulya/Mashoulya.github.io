@@ -56,6 +56,14 @@ h2{
     background-image: url(img/fond-home.jpg);
     background-size: cover;
     background-position: center;
+    .contact{
+        position: absolute;
+        bottom: 3%;
+        left: 4%;
+        a{
+            padding: 5px;
+        } 
+    }
 }
 
 .global-home{
@@ -162,107 +170,72 @@ h2{
     }
 }
 
-// Portfolio//
-.section-portfolio{
-    
-    .box-portfolio{       
-        width: 70%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding-bottom: 60px;
-        margin: 0 auto;
-  
-        .cartes-portfolio{
-            position: relative;
-            width: 300px;
-            margin: 30px;
-            box-shadow: 0px 3px 5px #082E4B;
 
-            .carte-overlay{
-                position: absolute;
-                width: 100%;
-                height: 180px;
-                background-color: #b3721c80;
-                opacity: 0.8;
-                transition: background-color 0.3s ease;
-                z-index: 2;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                display: none;
-                button{
-                    display: inline-block;
-                    margin: 80px auto;
-                    width: 100px;
-                    height: 30px;
-                    border-radius: 5px;
-                    border: none;
-                    text-transform: uppercase;
-                    cursor: pointer;
-                }
-            }
-        
-            .img-portfolio{
-                width: 100%;
-                height: 180px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-          
-            .txt-portfolio{
-                width: 100%;
-                height: 60px;
-                background-color: rgb(250, 255, 255);
-                text-align: center;
-                p{
-                    padding: 5px;
-                    line-height: 20px;
-                }
-        
-            }
+// A propos de moi//
+
+.about-me{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+.about-me-text{
+    padding-bottom: 30px; 
+        p{
+            width: 90%;
+            text-align: justify;
+            font-size: 20px;
+            // color: #0c0c0c;
+        }
+        a{
+            @extend %important-p;
+            text-decoration: none;
+        }
+    }
+    .my-photo{
+        .my-photo-img{
+            width: 250px;
         }
     }
 }
-    
 
-    .cartes-portfolio:hover .carte-overlay{
-        display: flex;
-    }
+// @media screen and (max-width: 800px){
+      
+// } à refaire!!!
 
-    @media screen and (max-width: 470px) {
-     
-        .box-portfolio{
-            @include reduce-cartes-portf;
-            .cartes-portfolio{
-                width: 180px;
-                margin: 20px;
-                
-                .carte-overlay{
-                    height: 100px;
-                    button{
-                        margin: 30px auto;
-                    }
-                }
 
-                .img-portfolio{
-                    height: 100px;
-                }
+// Technos
 
-                .txt-portfolio{
-                    height: 60px;
-                    p{
-                        font-size: 10px;
-                        padding: 3px;
-                    }
-                }
+h3{
+    text-align: center;
+    font-size: 30px;
+    color: $title-color;
+    padding: 50px;
+   }
+    .skills{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     margin-bottom: 60px;
+        .skills-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            text-align: center;
+            width: 50px;            
+            img{
+                width: 100%;
             }
-              
+            p{
+                text-align: center;
+                font-weight: bold;
+                font: 14px;
+                color: rgb(8, 8, 8);
+            }
         }
-                 
-    }
+       
+ }
 
 // Sérvices//
 
@@ -349,81 +322,107 @@ h2{
 }  
 
 
-// Technos
-
-   h3{
-    text-align: center;
-    font-size: 30px;
-    color: $title-color;
-    padding: 50px;
-   }
-    .skills{
-     width: 100%;
-     display: flex;
-     justify-content: center;
-        .skills-item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+// Portfolio//
+.section-portfolio{
+    background-color: #ccc;
+    .box-portfolio{       
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+        margin: 0 auto;
+  
+        .cartes-portfolio{
+            position: relative;
+            width: 350px;
             margin: 20px;
-            text-align: center;
-            width: 50px;            
-            img{
+            box-shadow: 0px 3px 5px #082E4B;
+
+            .img-portfolio{
                 width: 100%;
+                height: 200px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
             }
-            p{
+          
+            .txt-portfolio{
+                width: 100%;
+                height: 60px;
+                background-color: rgb(250, 255, 255);
                 text-align: center;
-                font-weight: bold;
-                font: 14px;
-                color: rgb(8, 8, 8);
+                p{
+                    padding: 5px;
+                    line-height: 20px;
+                }
+        
             }
-        }
-       
- }
-
- // A propos de moi//
-
-.about-me{
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
-.about-me-text{
-    padding-bottom: 60px; 
-        p{
-            width: 90%;
-            text-align: justify;
-            font-size: 20px;
-            // color: #0c0c0c;
-        }
-        a{
-            @extend %important-p;
-            text-decoration: none;
-        }
-    }
-    .my-photo{
-        .my-photo-img{
-            width: 250px;
         }
     }
 }
 
-// @media screen and (max-width: 800px){
-      
-// } à refaire!!!
 
+    @media screen and (max-width: 470px) {
+     
+        .box-portfolio{
+            @include reduce-cartes-portf;
+            .cartes-portfolio{
+                width: 180px;
+                margin: 20px;
+                
+                }
+
+                .img-portfolio{
+                    height: 100px;
+                }
+
+                .txt-portfolio{
+                    height: 60px;
+                    p{
+                        font-size: 10px;
+                        padding: 3px;
+                    }
+                }
+            }
+              
+        }
+                
 
 // Contact
 
+.box-contact{
+    width: 70%;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    gap: 30px;
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        ul li{
+            list-style: none;
+            font-size: 20px;
+            text-decoration: underline;
+            padding: 20px;
+            text-align: center;
+        }
+    }
+    
 .box-formular{
     display: flex;
-    width: 70%;
-    margin: 0  auto;
+    width: 90%;
     .form {
-        width: 50%;
+        width: 100%;
         max-width: 600px;
-        // margin: 0 auto;
         background-color: #4E9983;
         border-radius: 10px;
         padding-bottom: 5px;
@@ -483,7 +482,7 @@ h2{
         }
       }
 }
-
+}
 
 @media screen and (max-width: 800px) {
     .box-formular{

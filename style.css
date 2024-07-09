@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
-.about-me .about-me-text a, .services-container .service-type p {
+.services-container .service-type p, .about-me .about-me-text a {
   font-size: 20px;
   font-weight: 600;
   color: rgb(69, 189, 138);
@@ -63,6 +63,14 @@ body {
   background-image: url(img/fond-home.jpg);
   background-size: cover;
   background-position: center;
+}
+.fond .contact {
+  position: absolute;
+  bottom: 3%;
+  left: 4%;
+}
+.fond .contact a {
+  padding: 5px;
 }
 
 .global-home {
@@ -157,112 +165,59 @@ body {
     margin: 10px;
   }
 }
-.section-portfolio .box-portfolio {
+.about-me {
   width: 70%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-bottom: 60px;
   margin: 0 auto;
-}
-.section-portfolio .box-portfolio .cartes-portfolio {
-  position: relative;
-  width: 300px;
-  margin: 30px;
-  box-shadow: 0px 3px 5px #082E4B;
-}
-.section-portfolio .box-portfolio .cartes-portfolio .carte-overlay {
-  position: absolute;
-  width: 100%;
-  height: 180px;
-  background-color: rgba(179, 114, 28, 0.5019607843);
-  opacity: 0.8;
-  transition: background-color 0.3s ease;
-  z-index: 2;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  display: none;
+  justify-content: center;
+  align-items: flex-start;
 }
-.section-portfolio .box-portfolio .cartes-portfolio .carte-overlay button {
-  display: inline-block;
-  margin: 80px auto;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  text-transform: uppercase;
-  cursor: pointer;
+.about-me .about-me-text {
+  padding-bottom: 30px;
 }
-.section-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
-  width: 100%;
-  height: 180px;
+.about-me .about-me-text p {
+  width: 90%;
+  text-align: justify;
+  font-size: 20px;
 }
-.section-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
-  width: 100%;
-  height: 100%;
+.about-me .about-me-text a {
+  text-decoration: none;
 }
-.section-portfolio .box-portfolio .cartes-portfolio .txt-portfolio {
-  width: 100%;
-  height: 60px;
-  background-color: rgb(250, 255, 255);
+.about-me .my-photo .my-photo-img {
+  width: 250px;
+}
+
+h3 {
   text-align: center;
-}
-.section-portfolio .box-portfolio .cartes-portfolio .txt-portfolio p {
-  padding: 5px;
-  line-height: 20px;
+  font-size: 30px;
+  color: rgb(167, 113, 85);
+  padding: 50px;
 }
 
-.cartes-portfolio:hover .carte-overlay {
+.skills {
+  width: 100%;
   display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.skills .skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+  width: 50px;
+}
+.skills .skills-item img {
+  width: 100%;
+}
+.skills .skills-item p {
+  text-align: center;
+  font-weight: bold;
+  font: 14px;
+  color: rgb(8, 8, 8);
 }
 
-@media screen and (max-width: 470px) {
-  .box-portfolio .box-portfolio {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio {
-    position: relative;
-    margin: 30px;
-    box-shadow: 0px 3px 5px rgba(59, 59, 59, 0.685);
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
-    width: 100%;
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
-    width: 100%;
-    height: 100%;
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio .txt-portfolio {
-    width: 100%;
-    height: 60px;
-    background-color: rgb(250, 255, 255);
-    text-align: center;
-  }
-  .box-portfolio .cartes-portfolio {
-    width: 180px;
-    margin: 20px;
-  }
-  .box-portfolio .cartes-portfolio .carte-overlay {
-    height: 100px;
-  }
-  .box-portfolio .cartes-portfolio .carte-overlay button {
-    margin: 30px auto;
-  }
-  .box-portfolio .cartes-portfolio .img-portfolio {
-    height: 100px;
-  }
-  .box-portfolio .cartes-portfolio .txt-portfolio {
-    height: 60px;
-  }
-  .box-portfolio .cartes-portfolio .txt-portfolio p {
-    font-size: 10px;
-    padding: 3px;
-  }
-}
 .services-img {
   width: 100%;
   background-image: url(img/fond2.jpg);
@@ -346,89 +301,137 @@ body {
   box-shadow: 0 3px 5px hsl(206, 81%, 18%);
 }
 
-h3 {
-  text-align: center;
-  font-size: 30px;
-  color: rgb(167, 113, 85);
-  padding: 50px;
+.section-portfolio {
+  background-color: #ccc;
 }
-
-.skills {
+.section-portfolio .box-portfolio {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+  margin: 0 auto;
 }
-.skills .skills-item {
+.section-portfolio .box-portfolio .cartes-portfolio {
+  position: relative;
+  width: 350px;
+  margin: 20px;
+  box-shadow: 0px 3px 5px #082E4B;
+}
+.section-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
+  width: 100%;
+  height: 200px;
+}
+.section-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
+  width: 100%;
+  height: 100%;
+}
+.section-portfolio .box-portfolio .cartes-portfolio .txt-portfolio {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(250, 255, 255);
+  text-align: center;
+}
+.section-portfolio .box-portfolio .cartes-portfolio .txt-portfolio p {
+  padding: 5px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 470px) {
+  .box-portfolio .box-portfolio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .box-portfolio .box-portfolio .cartes-portfolio {
+    position: relative;
+    margin: 30px;
+    box-shadow: 0px 3px 5px rgba(59, 59, 59, 0.685);
+  }
+  .box-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
+    width: 100%;
+  }
+  .box-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
+    width: 100%;
+    height: 100%;
+  }
+  .box-portfolio .box-portfolio .cartes-portfolio .txt-portfolio {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(250, 255, 255);
+    text-align: center;
+  }
+  .box-portfolio .cartes-portfolio {
+    width: 180px;
+    margin: 20px;
+  }
+  .box-portfolio .img-portfolio {
+    height: 100px;
+  }
+  .box-portfolio .txt-portfolio {
+    height: 60px;
+  }
+  .box-portfolio .txt-portfolio p {
+    font-size: 10px;
+    padding: 3px;
+  }
+}
+.box-contact {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 30px;
+}
+.box-contact .contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
-  text-align: center;
-  width: 50px;
 }
-.skills .skills-item img {
-  width: 100%;
-}
-.skills .skills-item p {
-  text-align: center;
-  font-weight: bold;
-  font: 14px;
-  color: rgb(8, 8, 8);
-}
-
-.about-me {
-  width: 70%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.about-me .about-me-text {
-  padding-bottom: 60px;
-}
-.about-me .about-me-text p {
-  width: 90%;
-  text-align: justify;
+.box-contact .contacts p {
   font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
 }
-.about-me .about-me-text a {
-  text-decoration: none;
+.box-contact .contacts ul li {
+  list-style: none;
+  font-size: 20px;
+  text-decoration: underline;
+  padding: 20px;
+  text-align: center;
 }
-.about-me .my-photo .my-photo-img {
-  width: 250px;
-}
-
-.box-formular {
+.box-contact .box-formular {
   display: flex;
-  width: 70%;
-  margin: 0 auto;
+  width: 90%;
 }
-.box-formular .form {
-  width: 50%;
+.box-contact .box-formular .form {
+  width: 100%;
   max-width: 600px;
   background-color: #4E9983;
   border-radius: 10px;
   padding-bottom: 5px;
   margin-bottom: 40px;
 }
-.box-formular .form h3 {
+.box-contact .box-formular .form h3 {
   text-align: center;
   padding-top: 5px;
   color: rgb(9, 29, 51);
 }
-.box-formular .form .form-row {
+.box-contact .box-formular .form .form-row {
   display: flex;
   justify-content: space-between;
 }
-.box-formular .form .form-row .form-group {
+.box-contact .box-formular .form .form-row .form-group {
   flex: 1;
   margin: 10px;
 }
-.box-formular .form .form-row .form-group label {
+.box-contact .box-formular .form .form-row .form-group label {
   display: block;
 }
-.box-formular .form .form-row .form-group input,
-.box-formular .form .form-row .form-group textarea {
+.box-contact .box-formular .form .form-row .form-group input,
+.box-contact .box-formular .form .form-row .form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -436,17 +439,17 @@ h3 {
   margin-top: 5px;
   font-family: Ouitfit, Verdana, Geneva, Tahoma, sans-serif;
 }
-.box-formular .form .form-row .form-group textarea {
+.box-contact .box-formular .form .form-row .form-group textarea {
   height: 100px;
 }
-.box-formular .form p {
+.box-contact .box-formular .form p {
   font-size: 12px;
   font-style: italic;
   text-align: left;
   margin-left: 10px;
   color: rgb(9, 29, 51);
 }
-.box-formular .form button[type=submit] {
+.box-contact .box-formular .form button[type=submit] {
   display: block;
   margin: 10px;
   padding: 10px;
