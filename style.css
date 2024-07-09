@@ -76,14 +76,29 @@ body {
 }
 .global-home .home h1 {
   color: rgb(167, 113, 85);
-  font-size: clamp(30px, 7vw, 70px);
+  font-size: clamp(30px, 7vw, 80px);
   font-weight: 1000;
-  line-height: 1.5;
+  line-height: 1.2;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 .global-home .home p {
-  color: white;
-  font-weight: 500;
+  line-height: 1;
+  font-weight: 600;
   font-size: clamp(20px, 4vw, 50px);
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffffff 20%, #b2daeb 30%, #9bcde2 70%, #ffffff 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
 .global-home .home a {
   text-decoration: none;
@@ -205,7 +220,7 @@ body {
 .services-container .service-type {
   background-color: rgba(255, 255, 255, 0.8235294118);
   border: none;
-  width: 200px;
+  width: 250px;
   height: auto;
   display: flex;
   flex-direction: column;
