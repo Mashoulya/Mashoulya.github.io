@@ -56,7 +56,7 @@ h2{
     background-image: url(img/fond-home.jpg);
     background-size: cover;
     background-position: center;
-    .contact{
+    .main-contact{
         position: absolute;
         bottom: 3%;
         left: 4%;
@@ -465,6 +465,9 @@ h3{
             margin-left: 10px;
             color: $main-color;
         }
+        span{
+            padding: 10px;
+        }
         button[type="submit"] {
           display: block;
           margin: 10px;
@@ -475,7 +478,7 @@ h3{
           background: rgb(2,34,24);
           background: linear-gradient(0deg, rgba(2,34,24,1) 12%, rgba(50,153,122,1) 100%);
           border: none;
-          border-radius: 3px;
+          border-radius: 5px;
           cursor: pointer;
           flex-grow: 1;
           width: calc(100% - 20px);

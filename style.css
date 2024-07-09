@@ -64,12 +64,12 @@ body {
   background-size: cover;
   background-position: center;
 }
-.fond .contact {
+.fond .main-contact {
   position: absolute;
   bottom: 3%;
   left: 4%;
 }
-.fond .contact a {
+.fond .main-contact a {
   padding: 5px;
 }
 
@@ -449,6 +449,9 @@ h3 {
   margin-left: 10px;
   color: rgb(9, 29, 51);
 }
+.box-contact .box-formular .form span {
+  padding: 10px;
+}
 .box-contact .box-formular .form button[type=submit] {
   display: block;
   margin: 10px;
@@ -459,7 +462,7 @@ h3 {
   background: rgb(2, 34, 24);
   background: linear-gradient(0deg, rgb(2, 34, 24) 12%, rgb(50, 153, 122) 100%);
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   flex-grow: 1;
   width: calc(100% - 20px);
