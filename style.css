@@ -173,9 +173,6 @@ body {
   align-items: center;
   gap: 20px;
 }
-.about-me .about-me-text {
-  background-color: rgba(245, 245, 245, 0.4);
-}
 .about-me .about-me-text p {
   width: 90%;
   margin: 0 auto;
@@ -305,7 +302,7 @@ h3 {
 }
 
 .section-portfolio {
-  background-color: #ccc;
+  background-color: rgba(245, 245, 245, 0.4);
 }
 .section-portfolio .box-portfolio {
   width: 100%;

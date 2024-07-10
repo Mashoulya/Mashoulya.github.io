@@ -181,7 +181,7 @@ h2{
     align-items:center;
     gap: 20px;
 .about-me-text{
-    background-color: rgba(245, 245, 245, 0.4);
+    // background-color: rgba(245, 245, 245, 0.4);
     // box-shadow: 0px 2px 5px rgba(9, 29, 51, 0.7);;
     // border-radius: 10px;
         p{
@@ -328,7 +328,7 @@ h3{
 
 // Portfolio//
 .section-portfolio{
-    background-color: #ccc;
+    background-color: rgba(245, 245, 245, 0.4);
     .box-portfolio{       
         width: 100%;
         display: flex;
