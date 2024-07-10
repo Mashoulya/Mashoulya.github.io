@@ -170,15 +170,18 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  gap: 20px;
 }
 .about-me .about-me-text {
-  padding-bottom: 30px;
+  background-color: rgba(245, 245, 245, 0.4);
 }
 .about-me .about-me-text p {
   width: 90%;
+  margin: 0 auto;
   text-align: justify;
   font-size: 20px;
+  padding: 10px;
 }
 .about-me .about-me-text a {
   text-decoration: none;

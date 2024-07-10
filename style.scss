@@ -178,14 +178,18 @@ h2{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items:flex-start;
+    align-items:center;
+    gap: 20px;
 .about-me-text{
-    padding-bottom: 30px; 
+    background-color: rgba(245, 245, 245, 0.4);
+    // box-shadow: 0px 2px 5px rgba(9, 29, 51, 0.7);;
+    // border-radius: 10px;
         p{
             width: 90%;
+            margin: 0 auto;
             text-align: justify;
             font-size: 20px;
-            // color: #0c0c0c;
+            padding: 10px
         }
         a{
             @extend %important-p;
