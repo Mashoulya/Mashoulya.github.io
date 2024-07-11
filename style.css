@@ -173,6 +173,11 @@ body {
   align-items: center;
   gap: 20px;
 }
+.about-me .about-me-text {
+  background-color: white;
+  padding: 10px;
+  position: relative;
+}
 .about-me .about-me-text p {
   width: 90%;
   margin: 0 auto;
@@ -182,6 +187,32 @@ body {
 }
 .about-me .about-me-text a {
   text-decoration: none;
+}
+.about-me .about-me-text,
+.about-me .about-me-text::before,
+.about-me .about-me-text::after {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #bbb;
+}
+.about-me .about-me-text::before,
+.about-me .about-me-text::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 99%;
+  background-color: #eee;
+}
+.about-me .about-me-text::before {
+  right: 20px;
+  top: 0;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+.about-me .about-me-text::after {
+  top: 5px;
+  right: -5px;
+  transform: rotate(2deg);
+  z-index: -2;
 }
 .about-me .my-photo .my-photo-img {
   width: 250px;
