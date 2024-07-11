@@ -48,7 +48,7 @@ body {
   width: 0;
   height: 2px;
   background: #B38D1C;
-  transition: 0.3s;
+  transition: 0.2s;
   transform: scale(0);
 }
 .nav-menu a:hover::after {
@@ -101,12 +101,12 @@ body {
   font-weight: 600;
   font-size: clamp(20px, 4vw, 50px);
   margin-bottom: 20px;
-  background: linear-gradient(to right, #ffffff 20%, #b2daeb 30%, #9bcde2 70%, #ffffff 80%);
+  background: linear-gradient(to right, #ffffff 20%, #70b9e4 30%, #f5c72f 70%, #ffffff 80%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-size: 500% auto;
-  animation: textShine 5s ease-in-out infinite alternate;
+  animation: textShine 4s ease-in-out infinite alternate;
 }
 .global-home .home a {
   text-decoration: none;
@@ -169,11 +169,12 @@ body {
   width: 70%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
 .about-me .about-me-text {
+  width: 70%;
   background-color: white;
   padding: 10px;
   position: relative;
@@ -204,18 +205,21 @@ body {
 }
 .about-me .about-me-text::before {
   right: 20px;
-  top: 0;
+  top: 20px;
   transform: rotate(-2deg);
   z-index: -1;
 }
 .about-me .about-me-text::after {
   top: 5px;
   right: -5px;
-  transform: rotate(2deg);
+  transform: rotate(5deg);
   z-index: -2;
 }
 .about-me .my-photo .my-photo-img {
-  width: 250px;
+  width: 270px;
+  border: 15px solid rgb(231, 228, 228);
+  border-top-left-radius: 100% 20px;
+  border-bottom-right-radius: 100% 20px;
 }
 
 h3 {
