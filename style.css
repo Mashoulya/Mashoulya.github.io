@@ -101,7 +101,7 @@ body {
   font-weight: 600;
   font-size: clamp(20px, 4vw, 50px);
   margin-bottom: 20px;
-  background: linear-gradient(to right, #ffffff 20%, #70b9e4 30%, #f5c72f 70%, #ffffff 80%);
+  background: linear-gradient(to right, #ffffff 20%, #5296bd 30%, #f5bf2c 70%, #ffffff 80%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -148,6 +148,29 @@ body {
 }
 .global-home .dots .dot:hover {
   transform: scale(1.3);
+}
+.global-home .dots a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.global-home .dots a .tooltip {
+  position: absolute;
+  left: -60%;
+  transform: translate(-60%);
+  padding: 5px;
+  background: rgb(190, 129, 49);
+  color: white;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.global-home .dots a:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media screen and (max-width: 610px) {
