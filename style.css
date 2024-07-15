@@ -365,6 +365,26 @@ h3 {
 .tarifs {
   width: 70%;
   margin: 0 auto;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: first baseline;
+}
+.tarifs .tarif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tarifs .tarif p {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(9, 29, 51);
+}
+.tarifs .tarif p a {
+  text-decoration: none;
+  background-color: rgb(190, 129, 49);
+  color: rgb(209, 23, 23);
 }
 
 .section-portfolio {
