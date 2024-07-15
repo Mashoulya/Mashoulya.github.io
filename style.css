@@ -343,20 +343,6 @@ h3 {
   list-style: none;
   text-align: center;
 }
-.services-container .service-type button {
-  margin-top: auto;
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid rgb(190, 129, 49);
-  background-color: white;
-  color: rgb(9, 29, 51);
-  font-weight: 600;
-}
-.services-container .service-type button:hover {
-  cursor: pointer;
-  background-color: rgba(179, 114, 28, 0.61);
-  color: white;
-}
 .services-container .service-type:hover {
   transform: scale(1.05);
   box-shadow: 0 3px 5px hsl(206, 81%, 18%);
@@ -365,26 +351,39 @@ h3 {
 .tarifs {
   width: 70%;
   margin: 0 auto;
-  height: 100px;
   display: flex;
   justify-content: space-evenly;
-  align-items: first baseline;
+  align-items: center;
+  margin-bottom: 50px;
 }
 .tarifs .tarif {
+  background-color: rgba(255, 255, 255, 0.4392156863);
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  position: relative;
+  gap: 20px;
+  padding: 15px;
 }
 .tarifs .tarif p {
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
   color: rgb(9, 29, 51);
 }
-.tarifs .tarif p a {
+.tarifs .tarif a {
+  position: absolute;
+  bottom: 5%;
   text-decoration: none;
+  font-size: 18px;
   background-color: rgb(190, 129, 49);
-  color: rgb(209, 23, 23);
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .section-portfolio {
