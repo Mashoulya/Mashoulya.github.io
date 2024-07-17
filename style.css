@@ -389,18 +389,14 @@ h3 {
 .prices .price-container .price p {
   text-align: center;
   font-size: 16px;
-  color: rgb(9, 29, 51);
 }
 .prices .price-container .price hr {
   width: 100%;
   height: 2px;
   color: rgb(0, 0, 0);
 }
-.prices .price-container .price .prix {
+.prices .prix {
   text-align: center;
-  margin-top: 20px; /* Add some spacing at the top */
-  font-size: 16px;
-  color: rgb(9, 29, 51);
 }
 
 .section-portfolio {
