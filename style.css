@@ -361,34 +361,46 @@ h3 {
   box-shadow: 0 3px 5px hsl(206, 81%, 18%);
 }
 
-.tarifs {
+.prices {
   background-color: rgb(255, 0, 0);
   width: 70%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
-  align-items: first baseline;
-  margin-bottom: 50px;
+  flex-direction: column;
+  justify-content: center;
 }
-.tarifs .tarif {
+.prices .price-container {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  gap: 20px;
+  width: 100%;
+}
+.prices .price-container .price {
   background-color: rgba(255, 255, 255, 0.4392156863);
   border: none;
   border-radius: 10px;
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
 }
-.tarifs .tarif p {
+.prices .price-container .price p {
   text-align: center;
   font-size: 16px;
   color: rgb(9, 29, 51);
 }
-.tarifs .tarif hr {
+.prices .price-container .price hr {
   width: 100%;
   height: 2px;
   color: rgb(0, 0, 0);
+}
+.prices .price-container .price .prix {
+  text-align: center;
+  margin-top: 20px; /* Add some spacing at the top */
+  font-size: 16px;
+  color: rgb(9, 29, 51);
 }
 
 .section-portfolio {
