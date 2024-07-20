@@ -377,7 +377,13 @@ h3{
 }
 
 // La modale
-
+.btn-price{
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+    font-size: 20px;
+    padding: 5px;
+}
 .prices{
     background-color: rgb(255, 0, 0);
     width: 70%;
