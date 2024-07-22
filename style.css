@@ -365,9 +365,31 @@ h3 {
 .btn-price {
   display: block;
   margin: 0 auto;
-  background-color: red;
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
   font-size: 20px;
-  padding: 5px;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.btn-price:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  background: rgb(190, 129, 49);
+  z-index: -1;
+  transition: 0.25s ease;
+  transform: translate(0, 0);
+}
+
+.btn-price:hover:before {
+  transform: translate(4px, 4px);
 }
 
 .prices {
@@ -377,6 +399,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  display: none;
 }
 .prices .price-container {
   display: grid;
