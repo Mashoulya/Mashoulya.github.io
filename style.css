@@ -115,22 +115,32 @@ body {
 .fond .home a {
   text-decoration: none;
 }
-.fond .home .main-btn {
-  width: 180px;
-  height: 40px;
-  margin: 20px 20px 0 0;
-  border: none;
-  border-radius: 10px;
+.fond .home a .main-btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
   cursor: pointer;
-  background-color: rgb(190, 129, 49);
-  font-weight: 500;
-  box-shadow: 0px 5px 0px #D9B750;
-  color: white;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  font-size: 20px;
+  padding: 15px;
+  margin-bottom: 50px;
+  background-color: #D9B750;
+  font-weight: 600;
 }
-.fond .home .main-btn:active {
-  background-color: #4E3E08;
-  box-shadow: 0px 2px 0px #D9B750;
-  transform: translateY(4px);
+.fond .home a .main-btn::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  background: rgb(190, 129, 49);
+  z-index: -1;
+  transition: 0.25s ease;
+}
+.fond .home a .main-btn:hover::before {
+  transform: translate(4px, 4px);
 }
 
 .dots {
@@ -376,7 +386,6 @@ h3 {
 .btn-price {
   display: block;
   margin: 0 auto;
-  background-color: transparent;
   border: 1px solid black;
   cursor: pointer;
   position: relative;
@@ -384,9 +393,9 @@ h3 {
   font-size: 20px;
   padding: 15px;
   margin-bottom: 50px;
+  background-color: transparent;
 }
-
-.btn-price:before {
+.btn-price::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -397,8 +406,7 @@ h3 {
   z-index: -1;
   transition: 0.25s ease;
 }
-
-.btn-price:hover:before {
+.btn-price:hover::before {
   transform: translate(4px, 4px);
 }
 
