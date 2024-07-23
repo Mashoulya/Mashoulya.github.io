@@ -70,6 +70,87 @@ body {
   width: 100%;
   transform: scale(1);
 }
+.fond .burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.fond .burger-checkbox:checked + .burger .burger-line {
+  background: transparent;
+}
+.fond .burger-checkbox:checked + .burger .burger-line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.fond .burger-checkbox:checked + .burger .burger-line::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.fond .burger-checkbox:checked ~ .nav-links {
+  transform: translateX(0);
+}
+.fond .burger {
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+  border: none;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+}
+.fond .burger .burger-line {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+.fond .burger .burger-line::before, .fond .burger .burger-line::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: transform 0.2s;
+}
+.fond .burger .burger-line::before {
+  top: -8px;
+}
+.fond .burger .burger-line::after {
+  top: 8px;
+}
+.fond .nav-links {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: grid;
+  gap: 12px;
+  padding: 42px 0;
+  margin: 0;
+  background: white;
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  width: 200px;
+  z-index: 1;
+}
+.fond .nav-links a {
+  display: block;
+  padding: 8px;
+  color: rgb(9, 29, 51);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+.fond .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.fond .burger-checkbox:checked ~ .nav-links {
+  transform: translateX(0);
+}
 .fond .main-contact {
   position: absolute;
   bottom: 3%;
@@ -151,7 +232,7 @@ body {
   top: 50%;
   right: 1%;
   transform: translateY(-50%);
-  z-index: 3;
+  z-index: 2;
 }
 .dots .dot {
   width: 12px;
@@ -188,17 +269,23 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .main-btn {
+  .fond .nav-menu {
+    display: none;
+  }
+  .fond .burger {
+    display: block;
+  }
+  .fond .main-btn {
     font-size: 14px;
     padding: 10px;
   }
-  .dots {
+  .fond .dots {
     position: relative;
     display: flex;
     margin: 0 auto;
     margin-top: 100px;
   }
-  .dots .dot {
+  .fond .dots .dot {
     margin: 10px;
   }
 }
@@ -383,7 +470,7 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
-  z-index: 999;
+  z-index: 9;
 }
 
 .btn-price {
@@ -424,7 +511,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 10;
 }
 .prices .price-container {
   display: grid;

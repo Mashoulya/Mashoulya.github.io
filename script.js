@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+   
+    // Modale
     const btnPrice = document.querySelector('.btn-price');
     const prices = document.querySelector('.prices');
     const overlay = document.querySelector('.overlay');
