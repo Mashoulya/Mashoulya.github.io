@@ -82,16 +82,16 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  gap: 15px;
 }
 .fond .home h1 {
   color: rgb(167, 113, 85);
   font-size: clamp(30px, 7vw, 80px);
   font-weight: 1000;
-  line-height: 1.2;
+  line-height: 1;
 }
 @keyframes textShine {
   0% {
@@ -102,10 +102,9 @@ body {
   }
 }
 .fond .home p {
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 600;
   font-size: clamp(20px, 4vw, 50px);
-  margin-bottom: 20px;
   background: linear-gradient(to right, #ffffff 20%, #5296bd 30%, #f5bf2c 70%, #ffffff 80%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -118,7 +117,6 @@ body {
 }
 .fond .home a .main-btn {
   display: block;
-  margin: 0 auto;
   border: 1px solid black;
   cursor: pointer;
   position: relative;
@@ -390,7 +388,6 @@ h3 {
 
 .btn-price {
   display: block;
-  margin: 0 auto;
   border: 1px solid black;
   cursor: pointer;
   position: relative;
@@ -399,6 +396,7 @@ h3 {
   padding: clamp(10px, 2vw, 15px);
   margin-bottom: 50px;
   background-color: transparent;
+  margin: 0 auto;
 }
 .btn-price::before {
   content: "";
