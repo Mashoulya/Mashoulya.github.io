@@ -189,6 +189,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .main-btn {
+    font-size: 14px;
+  }
   .dots {
     position: relative;
     display: flex;
