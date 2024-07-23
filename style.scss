@@ -1,5 +1,7 @@
-@import "utils";
-@import "componnents";
+@import 'variables';
+@import 'mixins';
+@import 'utils';
+@import 'componnents';
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
 *, ::after, ::before{
@@ -16,7 +18,7 @@ body{
 }
 
 h2{
-    @extend %title-H2;
+    @extend %h2;
 }
 
 .fond{
