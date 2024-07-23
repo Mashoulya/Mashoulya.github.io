@@ -78,17 +78,16 @@ body {
 .fond .main-contact a {
   padding: 5px;
 }
-
-.global-home {
-  position: relative;
+.fond .home {
+  position: absolute;
   display: flex;
-  justify-content: space-between;
-  margin-top: 12%;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.global-home .home {
-  margin: 0 auto;
-}
-.global-home .home h1 {
+.fond .home h1 {
   color: rgb(167, 113, 85);
   font-size: clamp(30px, 7vw, 80px);
   font-weight: 1000;
@@ -102,7 +101,7 @@ body {
     background-position: 100% 50%;
   }
 }
-.global-home .home p {
+.fond .home p {
   line-height: 1;
   font-weight: 600;
   font-size: clamp(20px, 4vw, 50px);
@@ -114,10 +113,10 @@ body {
   background-size: 500% auto;
   animation: textShine 4s ease-in-out infinite alternate;
 }
-.global-home .home a {
+.fond .home a {
   text-decoration: none;
 }
-.global-home .home .main-btn {
+.fond .home .main-btn {
   width: 180px;
   height: 40px;
   margin: 20px 20px 0 0;
@@ -129,38 +128,39 @@ body {
   box-shadow: 0px 5px 0px #D9B750;
   color: white;
 }
-.global-home .home .main-btn:active {
+.fond .home .main-btn:active {
   background-color: #4E3E08;
   box-shadow: 0px 2px 0px #D9B750;
   transform: translateY(4px);
 }
-.global-home .dots {
+
+.dots {
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   top: 50%;
-  right: 20px;
+  right: 1%;
   transform: translateY(-50%);
   z-index: 3;
 }
-.global-home .dots .dot {
+.dots .dot {
   width: 12px;
   height: 12px;
   margin: 15px;
   fill: rgb(190, 129, 49);
   transition: transform 0.3s ease;
 }
-.global-home .dots .dot:hover {
+.dots .dot:hover {
   transform: scale(1.3);
 }
-.global-home .dots a {
+.dots a {
   position: relative;
   display: inline-block;
   text-decoration: none;
 }
-.global-home .dots a .tooltip {
+.dots a .tooltip {
   position: absolute;
   left: -60%;
   transform: translate(-60%);
@@ -174,24 +174,25 @@ body {
   white-space: nowrap;
   pointer-events: none;
 }
-.global-home .dots a:hover .tooltip {
+.dots a:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
 
-@media screen and (max-width: 610px) {
-  .global-home {
-    flex-direction: column;
-    margin-left: 10%;
-  }
-  .global-home .dots {
+@media screen and (max-width: 768px) {
+  .dots {
     position: relative;
     display: flex;
     margin: 0 auto;
     margin-top: 100px;
   }
-  .global-home .dots .dot {
+  .dots .dot {
     margin: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dots {
+    display: none;
   }
 }
 .about-me {
@@ -457,11 +458,8 @@ h3 {
   padding: 10px;
 }
 
-.section-portfolio {
-  background-color: rgba(245, 245, 245, 0.4);
-}
 .section-portfolio .box-portfolio {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

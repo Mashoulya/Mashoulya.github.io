@@ -64,79 +64,76 @@ h2{
             padding: 5px;
         } 
     }
-}
-
-.global-home{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 12%;    
     .home{
-    margin: 0 auto;
-   
-    h1{
-        color: $title-color;
-        font-size: clamp(30px, 7vw, 80px);
-        font-weight:1000;        
-        line-height: 1.2;
-    } 
-    @keyframes textShine {
-        0% {
-          background-position: 0% 50%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1{
+            color: $title-color;
+            font-size: clamp(30px, 7vw, 80px);
+            font-weight:1000;        
+            line-height: 1.2;
         }
-        100% {
-          background-position: 100% 50%;
+        @keyframes textShine{
+            0% {
+                background-position: 0% 50%;
+              }
+              100% {
+                background-position: 100% 50%;
+              }
         }
-      }   
-    p{
-        line-height: 1;
-        font-weight: 600;
-        font-size: clamp(20px, 4vw, 50px);
-        margin-bottom: 20px;
-        background: linear-gradient(
-            to right,
-            #ffffff 20%,
-            #5296bd 30%,
-            #f5bf2c 70%,
-            #ffffff 80%
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        background-size: 500% auto;
-        animation: textShine 4s ease-in-out infinite alternate;
-    }
-    a{
+        p{
+            line-height: 1;
+            font-weight: 600;
+            font-size: clamp(20px, 4vw, 50px);
+            margin-bottom: 20px;
+            background: linear-gradient(
+                to right,
+                #ffffff 20%,
+                #5296bd 30%,
+                #f5bf2c 70%,
+                #ffffff 80%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 500% auto;
+            animation: textShine 4s ease-in-out infinite alternate;
+        }
+        a{
          text-decoration: none;
-    }
-
-    .main-btn{
-        width: 180px;
-        height: 40px;
-        margin: 20px 20px 0 0;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: $btn-color;
-        font-weight: 500;
-        box-shadow: 0px 5px 0px #D9B750;
-        color: white;
-        &:active{
+        }
+        .main-btn{
+            width: 180px;
+            height: 40px;
+            margin: 20px 20px 0 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: $btn-color;
+            font-weight: 500;
+            box-shadow: 0px 5px 0px #D9B750;
+            color: white;
+            &:active{
             background-color: #4E3E08;
             box-shadow: 0px 2px 0px #D9B750;
             transform: translateY(4px)
+            }
         }
     }
-  }
-
-  .dots{
+}
+.dots{
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     top: 50%;
-    right: 20px;
+    right: 1%;
     transform: translateY(-50%);
     z-index: 3;
     .dot{
@@ -172,27 +169,25 @@ h2{
         opacity: 1;
         visibility: visible;
     }
-  }
-
 }
 
-@media screen and (max-width: 610px){
-    .global-home{
-        flex-direction: column;
-        margin-left: 10%;
-
-        .dots{
-            position: relative;
-            display: flex;
-            margin: 0 auto;
-            margin-top: 100px;
-            .dot{
+@media screen and (max-width: 768px){
+   .dots{
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 100px;
+        .dot{
                 margin: 10px;
-            }
         }
     }
 }
 
+@media screen and (max-width: 480px){
+   .dots{
+        display: none;   
+    }  
+}
 
 // A propos de moi//
 
@@ -472,9 +467,9 @@ h3{
 
 // Portfolio//
 .section-portfolio{
-    background-color: rgba(245, 245, 245, 0.4);
+    // background-color: ;
     .box-portfolio{       
-        width: 100%;
+        width: 80%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
