@@ -47,8 +47,8 @@ $important-text: rgb(69, 189, 138);
     cursor: pointer;
     position: relative;
     transition: .2s ease-in-out;
-    font-size: clamp(12px, 4vw, 20px);
-    padding: 15px;
+    font-size: clamp(12px, 2.5vw, 20px);
+    padding: clamp(10px, 2vw, 15px);
     margin-bottom: 50px;
     &::before {
         content: '';
