@@ -418,7 +418,8 @@ h3{
             align-items: center;
             margin: 20px;
             text-align: center;
-            width: 50px;            
+            width: 50px;
+            height: 50px;            
             img{
                 width: 100%;
             }
@@ -432,6 +433,17 @@ h3{
        
  }
 
+ @media screen and (max-width: 1000px) {
+    .skills{
+        flex-wrap: wrap;
+        .skills-item{
+           width: 30px;
+           img{
+            width: 100%;
+            }
+        }
+    }
+ }
 // Sérvices//
 
 .services-img{
@@ -449,7 +461,7 @@ h3{
             align-items: center;
                 p{
                 color: $another-title;
-                font-size: 25px;
+                font-size: clamp(12px, 1.5vw, 25px);;
                 font-weight: 800;
                 text-align: center;
                 padding-bottom: 10px;
@@ -513,8 +525,40 @@ h3{
         .service-type:hover {
             transform: scale(1.05);
             box-shadow: 0 3px 5px hsl(206, 81%, 18%);
+        }  
+}
+
+@media screen and (max-width: 800px){
+    .services-img{
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+        .service-img{
+           width: 70px;
+           img{
+            width: 50px;
+           }           
         }
-        
+    }
+    .services-container{
+        width: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        .service-type{
+            width: 180px;
+            padding: 10px;
+            position: relative;
+            > * {
+                margin-bottom: 20px;
+                }
+                img{
+                width: 30px;
+                }
+            
+        }
+            
+    }
 }
 
 // La modale

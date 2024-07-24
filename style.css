@@ -415,6 +415,7 @@ h3 {
   margin: 20px;
   text-align: center;
   width: 50px;
+  height: 50px;
 }
 .skills .skills-item img {
   width: 100%;
@@ -426,6 +427,17 @@ h3 {
   color: rgb(8, 8, 8);
 }
 
+@media screen and (max-width: 1000px) {
+  .skills {
+    flex-wrap: wrap;
+  }
+  .skills .skills-item {
+    width: 30px;
+  }
+  .skills .skills-item img {
+    width: 100%;
+  }
+}
 .services-img {
   width: 100%;
   background-image: url(img/fond2.jpg);
@@ -443,7 +455,7 @@ h3 {
 }
 .services-img .service-img p {
   color: rgb(106, 207, 177);
-  font-size: 25px;
+  font-size: clamp(12px, 1.5vw, 25px);
   font-weight: 800;
   text-align: center;
   padding-bottom: 10px;
@@ -509,6 +521,36 @@ h3 {
   box-shadow: 0 3px 5px hsl(206, 81%, 18%);
 }
 
+@media screen and (max-width: 800px) {
+  .services-img {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .services-img .service-img {
+    width: 70px;
+  }
+  .services-img .service-img img {
+    width: 50px;
+  }
+  .services-container {
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .services-container .service-type {
+    width: 180px;
+    padding: 10px;
+    position: relative;
+  }
+  .services-container .service-type > * {
+    margin-bottom: 20px;
+  }
+  .services-container .service-type img {
+    width: 30px;
+  }
+}
 .overlay {
   position: fixed;
   top: 0;
