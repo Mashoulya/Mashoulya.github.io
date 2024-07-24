@@ -510,6 +510,7 @@ h3{
             ul li{
                 list-style:none;
                 text-align: center;
+                font-size: clamp(14px, 1.5vw, 16px);
             }
             button{
                 margin-top: auto;

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
 .services-container .service-type p, .about-me .about-me-text a {
-  font-size: clamp(12px, 1.5vw, 20px);
+  font-size: clamp(14px, 1.5vw, 20px);
   font-weight: 600;
   color: rgb(69, 189, 138);
 }
@@ -504,6 +504,7 @@ h3 {
 .services-container .service-type ul li {
   list-style: none;
   text-align: center;
+  font-size: clamp(14px, 1.5vw, 16px);
 }
 .services-container .service-type button {
   margin-top: auto;
