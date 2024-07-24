@@ -444,6 +444,7 @@ h3{
         }
     }
  }
+
 // Sérvices//
 
 .services-img{
@@ -461,7 +462,7 @@ h3{
             align-items: center;
                 p{
                 color: $another-title;
-                font-size: clamp(12px, 1.5vw, 25px);;
+                font-size: clamp(12px, 1.5vw, 25px);
                 font-weight: 800;
                 text-align: center;
                 padding-bottom: 10px;
@@ -469,8 +470,10 @@ h3{
         }
     }
     .service-p{
+        width: 70%;
+        margin: 0 auto;
         text-align: center;
-        font-size: 20px;
+        font-size: clamp(12px, 1.5vw, 20px);
         font-weight: 600;
         margin-bottom: 60px;
     }
@@ -528,13 +531,15 @@ h3{
         }  
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
     .services-img{
         height: auto;
         flex-wrap: wrap;
+        gap: 5px;
         padding: 10px;
+        margin-bottom: 20px;
         .service-img{
-           width: 70px;
+            width: 80px;
            img{
             width: 50px;
            }           
@@ -551,10 +556,10 @@ h3{
             position: relative;
             > * {
                 margin-bottom: 20px;
-                }
-                img{
-                width: 30px;
-                }
+            }
+            img{
+            width: 30px;
+            }
             
         }
             
@@ -562,6 +567,7 @@ h3{
 }
 
 // La modale
+
 .overlay {
     position: fixed;
     top: 0;
@@ -635,6 +641,7 @@ h3{
 
 
 // Portfolio//
+
 .section-portfolio{
     // background-color: ;
     .box-portfolio{       
@@ -715,98 +722,110 @@ h3{
         flex-direction: column;
         align-items: center;
         p{
-            font-size: 20px;
+            font-size: clamp(14px, 1.5vw, 20px);
             font-weight: 600;
             text-align: center;
             margin-bottom: 30px;
         }
         ul li{
             list-style: none;
-            font-size: 20px;
+            font-size: clamp(14px, 1.5vw, 20px);
             text-decoration: underline;
             padding: 20px;
             text-align: center;
         }
     }
     
-.box-formular{
-    display: flex;
-    width: 90%;
-    .form {
-        width: 100%;
-        max-width: 600px;
-        background-color: #4E9983;
-        border-radius: 10px;
-        padding-bottom: 5px;
-        margin-bottom: 40px;
-        h3{
-            text-align: center;
-            padding-top: 5px;
-            color: $main-color;
-        }
-        .form-row {
-          display: flex;
-          justify-content: space-between;
-      
-          .form-group {
-            flex: 1;
-            margin: 10px;
-      
-            label {
-              display: block;
-            }
-      
-            input,
-            textarea {
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 10px;
-              margin-top: 5px;
-              font-family: Ouitfit, Verdana, Geneva, Tahoma, sans-serif;
-            }
-            textarea{
-                height: 100px;
-            }
-          }
-        }
-        p{
-            font-size: 12px;
-            font-style: italic;
-            text-align: left;
-            margin-left: 10px;
-            color: $main-color;
-        }
-        span{
-            padding: 10px;
-        }
-        button[type="submit"] {
-          display: block;
-          margin: 10px;
-          padding: 10px;
-          color: rgb(206, 241, 241);
-          text-transform: uppercase;
-          cursor: pointer;
-          background: rgb(2,34,24);
-          background: linear-gradient(0deg, rgba(2,34,24,1) 12%, rgba(50,153,122,1) 100%);
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          flex-grow: 1;
-          width: calc(100% - 20px);
-        }
-      }
-}
-}
-
-@media screen and (max-width: 800px) {
     .box-formular{
-        flex-direction: column;
-        .form{
+        display: flex;
+        width: 90%;
+        .form {
             width: 100%;
+            max-width: 600px;
+            background-color: #4E9983;
+            border-radius: 10px;
+            padding-bottom: 5px;
+            margin-bottom: 40px;
+            h3{
+                text-align: center;
+                padding-top: 5px;
+                color: $main-color;
+            }
+            .form-row {
+            display: flex;
+            justify-content: space-between;
+      
+            .form-group {
+                flex: 1;
+                margin: 10px;
+      
+                label {
+                    display: block;
+                }
+      
+                input,
+                textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin-top: 5px;
+                font-family: Ouitfit, Verdana, Geneva, Tahoma, sans-serif;
+                }
+                textarea{
+                    height: 100px;
+                }
+            }
+            }
+            p{
+                font-size: 12px;
+                font-style: italic;
+                text-align: left;
+                margin-left: 10px;
+                color: $main-color;
+            }
+            span{
+                padding: 10px;
+            }
+            button[type="submit"] {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            color: rgb(206, 241, 241);
+            text-transform: uppercase;
+            cursor: pointer;
+            background: rgb(2,34,24);
+            background: linear-gradient(0deg, rgba(2,34,24,1) 12%, rgba(50,153,122,1) 100%);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex-grow: 1;
+            width: calc(100% - 20px);
+            }
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .box-contact{
+        gap: 20px;
+        .box-formular{
+            .form {
+                .form-row {
+                    flex-direction: column;
+                }
+      
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box-contact{
+        flex-direction: column;
+    }
+}
+
 
 // Footer
  
