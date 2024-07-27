@@ -643,8 +643,11 @@ h3{
 /* Изменение раскладки при сужении экрана */
 @media screen and (max-width: 768px) {
     .prices{
+        width: 100%;
+        position: relative;
         .price-container {
             grid-template-columns: repeat(2, 1fr);
+            gap: 0;
             .item1 {
                 grid-area: 1 / 1 / 2 / 3;
             }
@@ -829,6 +832,7 @@ h3{
 
 @media screen and (max-width: 1000px) {
     .box-contact{
+        width: 90%;
         gap: 20px;
         .box-formular{
             .form {
