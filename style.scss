@@ -537,7 +537,7 @@ h3{
         height: auto;
         flex-wrap: wrap;
         gap: 5px;
-        padding: 5px;
+        padding: 10px;
         margin-bottom: 20px;
         .service-img{
             // width: 80px;
@@ -612,7 +612,7 @@ h3{
             text-align: center;
             p{
                 text-align: center;
-                font-size: 16px;
+                font-size: clamp(14px, 2vw, 16px);
             }
             hr{
                 width: 100%;
@@ -635,6 +635,7 @@ h3{
         }
     }
     .prix{
+        font-size: clamp(14px, 2vw, 16px);
         text-align: center;
         padding: 10px;
     }
@@ -645,9 +646,19 @@ h3{
     .prices{
         width: 100%;
         position: fixed;
+        max-height: 90vh;
+        overflow-y: auto; 
         .price-container {
             grid-template-columns: repeat(2, 1fr);
             gap: 0;
+            line-height: 1.2;
+            .price{
+                margin: 5px auto;
+                padding: 5px;
+            }
+            img{
+                display: none;
+            }
             .item1 {
                 grid-area: 1 / 1 / 2 / 3;
             }
