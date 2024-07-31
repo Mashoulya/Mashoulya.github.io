@@ -554,6 +554,19 @@ h3 {
     width: 30px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .services-container {
+    margin-bottom: 10px;
+  }
+  .services-container .service-type {
+    width: 160px;
+    padding: 10px;
+    position: relative;
+  }
+  .services-container .service-type > * {
+    margin-bottom: 10px;
+  }
+}
 .overlay {
   position: fixed;
   top: 0;

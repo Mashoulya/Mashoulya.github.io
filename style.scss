@@ -566,6 +566,19 @@ h3{
             
     }
 }
+@media screen and (max-width: 1000px){
+    .services-container{
+        margin-bottom: 10px;
+        .service-type{
+            width: 160px;
+            padding: 10px;
+            position: relative;
+            > * {
+                margin-bottom: 10px;
+            }            
+        }    
+    }
+}
 
 // La modale
 
