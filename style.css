@@ -362,7 +362,7 @@ body {
     gap: 10px;
   }
   .about-me .about-me-text {
-    width: 100%;
+    width: 90%;
   }
   .about-me .about-me-text p {
     width: 100%;
@@ -397,6 +397,14 @@ body {
   }
   .about-me .my-photo .my-photo-img {
     width: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    padding: 30px;
+  }
+  .about-me .about-me-text {
+    width: 100%;
   }
 }
 h3 {
@@ -439,6 +447,14 @@ h3 {
     width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  h3 {
+    padding: 30px;
+  }
+  .skills {
+    margin-bottom: 30px;
+  }
+}
 .services-img {
   width: 100%;
   background-image: url(img/fond2.jpg);
@@ -468,7 +484,7 @@ h3 {
   text-align: center;
   font-size: clamp(14px, 1.5vw, 20px);
   font-weight: 600;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .services-container {
@@ -554,9 +570,15 @@ h3 {
     width: 30px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
+  .services-img {
+    margin-bottom: 0;
+  }
+  .service-p {
+    margin-bottom: 30px;
+  }
   .services-container {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .services-container .service-type {
     width: 160px;
@@ -707,6 +729,9 @@ h3 {
   }
 }
 @media screen and (max-width: 600px) {
+  .btn-price {
+    margin-bottom: 10px;
+  }
   .prices {
     width: 100%;
   }
@@ -716,18 +741,17 @@ h3 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 60px;
   margin: 0 auto;
 }
 .section-portfolio .box-portfolio .cartes-portfolio {
   position: relative;
   width: 350px;
+  height: 200px;
   margin: 20px;
   box-shadow: 0px 3px 5px #082E4B;
 }
 .section-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
   width: 100%;
-  height: 200px;
 }
 .section-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
   width: 100%;
@@ -745,43 +769,13 @@ h3 {
 }
 
 @media screen and (max-width: 470px) {
-  .box-portfolio .box-portfolio {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  .section-portfolio .box-portfolio {
+    width: 90%;
   }
-  .box-portfolio .box-portfolio .cartes-portfolio {
-    position: relative;
-    margin: 30px;
-    box-shadow: 0px 3px 5px rgba(59, 59, 59, 0.685);
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
-    width: 100%;
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
-    width: 100%;
-    height: 100%;
-  }
-  .box-portfolio .box-portfolio .cartes-portfolio .txt-portfolio {
-    width: 100%;
-    height: 60px;
-    background-color: rgb(250, 255, 255);
-    text-align: center;
-  }
-  .box-portfolio .cartes-portfolio {
-    width: 180px;
-    margin: 20px;
-  }
-  .box-portfolio .img-portfolio {
-    height: 100px;
-  }
-  .box-portfolio .txt-portfolio {
-    height: 60px;
-  }
-  .box-portfolio .txt-portfolio p {
-    font-size: 10px;
-    padding: 3px;
+  .section-portfolio .box-portfolio .cartes-portfolio {
+    width: 250px;
+    height: auto;
+    margin: 10px;
   }
 }
 .box-contact {
@@ -890,6 +884,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 0;
+  }
+  .box-contact .contacts p {
+    margin-bottom: 0;
   }
 }
 footer {

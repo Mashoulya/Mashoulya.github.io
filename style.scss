@@ -359,7 +359,7 @@ h2{
         align-items:center;
         gap: 10px;
         .about-me-text{
-            width: 100%;
+            width: 90%;
                 p{
                     width: 100%;
                     text-align: justify;
@@ -400,6 +400,16 @@ h2{
       }
 } 
 
+@media screen and (max-width: 768px){
+    h2{
+        padding: 30px;
+    }
+    .about-me{
+      .about-me-text{
+        width: 100%;
+        }
+    }
+}
 
 // Technos
 
@@ -445,6 +455,15 @@ h3{
     }
  }
 
+ @media screen and (max-width: 768px) {
+    h3{
+        padding: 30px;
+    }
+    .skills{
+        margin-bottom: 30px;
+    }
+ }
+
 // Sérvices//
 
 .services-img{
@@ -475,7 +494,7 @@ h3{
         text-align: center;
         font-size: clamp(14px, 1.5vw, 20px);
         font-weight: 600;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
     .services-container{
         width: 70%;
@@ -566,9 +585,15 @@ h3{
             
     }
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 768px){
+    .services-img{
+        margin-bottom: 0;
+    }
+    .service-p{
+        margin-bottom: 30px;
+    }
     .services-container{
-        margin-bottom: 10px;
+        margin-bottom: 0;
         .service-type{
             width: 160px;
             padding: 10px;
@@ -704,6 +729,9 @@ h3{
     }
 }
 @media screen and (max-width: 600px) {
+    .btn-price{
+        margin-bottom: 10px;
+    }
     .prices{
         width: 100%;
     }
@@ -719,18 +747,17 @@ h3{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding-bottom: 60px;
         margin: 0 auto;
   
         .cartes-portfolio{
             position: relative;
             width: 350px;
+            height: 200px;
             margin: 20px;
             box-shadow: 0px 3px 5px #082E4B;
 
             .img-portfolio{
                 width: 100%;
-                height: 200px;
                 img{
                     width: 100%;
                     height: 100%;
@@ -753,30 +780,18 @@ h3{
 }
 
 
-    @media screen and (max-width: 470px) {
-     
-        .box-portfolio{
-            @include reduce-cartes-portf;
-            .cartes-portfolio{
-                width: 180px;
-                margin: 20px;
-                
-                }
-
-                .img-portfolio{
-                    height: 100px;
-                }
-
-                .txt-portfolio{
-                    height: 60px;
-                    p{
-                        font-size: 10px;
-                        padding: 3px;
-                    }
-                }
-            }
-              
+@media screen and (max-width: 470px) {
+    .section-portfolio{
+       .box-portfolio{
+        width: 90%;
+        .cartes-portfolio{
+            width: 250px;
+            height: auto;
+            margin: 10px;
         }
+        } 
+    }   
+}
                 
 
 // Contact
@@ -897,6 +912,11 @@ h3{
         flex-direction: column;
         align-items: center;
         gap: 0;
+        .contacts{
+            p{
+                margin-bottom: 0;      
+            }
+        }
     }
 }
 
