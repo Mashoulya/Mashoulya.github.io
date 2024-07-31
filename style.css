@@ -649,9 +649,21 @@ h3 {
 }
 
 /* Изменение раскладки при сужении экрана */
+@media screen and (max-width: 1024px) {
+  .prices {
+    width: 90%;
+  }
+  .prices .price-container .price img {
+    display: none;
+  }
+  .prices .prix {
+    line-height: 1.2;
+    padding: 5px;
+  }
+}
 @media screen and (max-width: 768px) {
   .prices {
-    width: 100%;
+    width: 70%;
     position: fixed;
     max-height: 90vh;
     overflow-y: auto;
@@ -663,7 +675,7 @@ h3 {
   }
   .prices .price-container .price {
     margin: 5px auto;
-    padding: 5px;
+    padding: 3px;
   }
   .prices .price-container img {
     display: none;
@@ -679,6 +691,11 @@ h3 {
   }
   .prices .price-container .item4 {
     grid-area: 3/2/4/3;
+  }
+}
+@media screen and (max-width: 600px) {
+  .prices {
+    width: 100%;
   }
 }
 .section-portfolio .box-portfolio {
