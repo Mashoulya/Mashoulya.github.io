@@ -352,6 +352,11 @@ body {
   border-bottom-right-radius: 100% 20px;
 }
 
+@media screen and (max-width: 1024px) {
+  .about-me {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 1000px) {
   .about-me {
     width: 95%;
@@ -546,7 +551,7 @@ h3 {
     height: auto;
     flex-wrap: wrap;
     gap: 5px;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 20px;
   }
   .services-img .service-img img {
@@ -573,6 +578,7 @@ h3 {
 @media screen and (max-width: 768px) {
   .services-img {
     margin-bottom: 0;
+    padding: 10px;
   }
   .service-p {
     margin-bottom: 30px;
@@ -744,38 +750,40 @@ h3 {
   margin: 0 auto;
 }
 .section-portfolio .box-portfolio .cartes-portfolio {
+  background-color: #faffff;
   position: relative;
   width: 350px;
-  height: 200px;
+  height: 250px;
   margin: 20px;
   box-shadow: 0px 3px 5px #082E4B;
 }
 .section-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
   width: 100%;
+  height: 190px;
 }
 .section-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
   width: 100%;
   height: 100%;
 }
-.section-portfolio .box-portfolio .cartes-portfolio .txt-portfolio {
-  width: 100%;
-  height: 60px;
-  background-color: rgb(250, 255, 255);
+.section-portfolio .box-portfolio .cartes-portfolio p {
+  padding: 5px;
   text-align: center;
 }
-.section-portfolio .box-portfolio .cartes-portfolio .txt-portfolio p {
-  padding: 5px;
-  line-height: 20px;
-}
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 600px) {
   .section-portfolio .box-portfolio {
-    width: 90%;
+    width: 100%;
   }
   .section-portfolio .box-portfolio .cartes-portfolio {
     width: 250px;
     height: auto;
     margin: 10px;
+  }
+  .section-portfolio .box-portfolio .cartes-portfolio .img-portfolio {
+    height: 160px;
+  }
+  .section-portfolio .box-portfolio .cartes-portfolio .img-portfolio img {
+    height: 100%;
   }
 }
 .box-contact {

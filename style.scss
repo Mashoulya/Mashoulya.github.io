@@ -350,6 +350,12 @@ h2{
     }
 }
 
+@media screen and (max-width: 1024px){
+    .about-me{
+        width: 80%; 
+    }
+}
+
 @media screen and (max-width: 1000px){
       .about-me{
         width: 95%;
@@ -556,7 +562,7 @@ h3{
         height: auto;
         flex-wrap: wrap;
         gap: 5px;
-        padding: 10px;
+        padding: 20px;
         margin-bottom: 20px;
         .service-img{
             // width: 80px;
@@ -588,6 +594,7 @@ h3{
 @media screen and (max-width: 768px){
     .services-img{
         margin-bottom: 0;
+        padding: 10px;
     }
     .service-p{
         margin-bottom: 30px;
@@ -750,45 +757,46 @@ h3{
         margin: 0 auto;
   
         .cartes-portfolio{
+            background-color: #faffff;
             position: relative;
             width: 350px;
-            height: 200px;
+            height: 250px;
             margin: 20px;
             box-shadow: 0px 3px 5px #082E4B;
 
             .img-portfolio{
                 width: 100%;
+                height: 190px;
                 img{
                     width: 100%;
                     height: 100%;
                 }
             }
-          
-            .txt-portfolio{
-                width: 100%;
-                height: 60px;
-                background-color: rgb(250, 255, 255);
-                text-align: center;
-                p{
-                    padding: 5px;
-                    line-height: 20px;
-                }
-        
+            p{
+                padding: 5px;
+                text-align: center; 
             }
+          
         }
     }
 }
 
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 600px) {
     .section-portfolio{
        .box-portfolio{
-        width: 90%;
-        .cartes-portfolio{
-            width: 250px;
-            height: auto;
-            margin: 10px;
-        }
+            width: 100%;
+            .cartes-portfolio{
+                width: 250px;
+                height: auto;
+                margin: 10px;
+                .img-portfolio{
+                    height: 160px;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
         } 
     }   
 }
