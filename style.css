@@ -876,6 +876,10 @@ h3 {
   flex-grow: 1;
   width: calc(100% - 20px);
 }
+.box-contact .box-formular .form .error {
+  color: red;
+  font-size: 12px;
+}
 
 @media screen and (max-width: 1000px) {
   .box-contact {

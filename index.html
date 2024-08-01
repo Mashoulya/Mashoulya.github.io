@@ -290,42 +290,21 @@
       <div class="img-portfolio">
         <img src="img/photo_magasin.jpg" alt="kalinka">
       </div>
-      <p>Le site pour une épicerie</p>
+      <p>Le site pour une épicerie (en production).</p>
     </div>
           
     <div class="cartes-portfolio">
       <div class="img-portfolio">
         <img src="img/page d'accueil.jpg" alt="">
       </div> 
-      <p>Le projet personnel créé pendant la formation.</p>
+      <p>Futur projet.</p>
     </div>
          
     <div class="cartes-portfolio">
       <div class="img-portfolio">
         <img src="img/img1.jpg" alt="">
       </div>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    
-    <div class="cartes-portfolio">
-      <div class="img-portfolio">
-        <img src="img/photo_magasin.jpg" alt="kalinka">
-      </div>
-      <p>Le site pour une épicerie</p>
-    </div>
-
-    <div class="cartes-portfolio">
-      <div class="img-portfolio">
-        <img src="img/photo_magasin.jpg" alt="kalinka">
-      </div>
-      <p>Le site pour une épicerie</p>
-    </div>
-
-    <div class="cartes-portfolio">
-      <div class="img-portfolio">
-        <img src="img/photo_magasin.jpg" alt="kalinka">
-      </div>
-        <p>Le site pour une épicerie</p>
+      <p>Votre projet pourrait être ici.</p>
     </div>
   </div>
 
@@ -361,7 +340,7 @@
          
     <div class="box-formular">
 
-      <form method="POST" class="form">
+      <form method="POST" id="contactForm" class="form">
         <div class="form-row">
           <div class="form-group">
             <label for="lastName"></label>
@@ -390,6 +369,7 @@
         </div>
         <span>*Champs obligatoires</span>
         <button type="submit" name="send" value="Envoyer">Envoyer</button>
+        <div id="formError" class="error"></div>
         <?php if(!empty($message)){ ?>
           <div class="success">
             <strong><?php echo $message; ?> </strong>
