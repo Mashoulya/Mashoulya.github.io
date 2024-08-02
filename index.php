@@ -1,5 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
+
+// Récupérer les erreurs et les données soumises depuis la session
+$errors = $_SESSION['errors'] ?? [];
+$submittedData = $_SESSION['submittedData'] ?? [];
+
+// Nettoyer les données de la session après affichage
+unset($_SESSION['errors']);
+unset($_SESSION['submittedData']);
+?>
+
+
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -323,11 +335,21 @@
             <label for="firstName"></label>
             <input type="text" id="firstName" name="firstName" placeholder="Prénom*" required>
             <div id="fNameError" class="error">Le prénom doit être entre 2 et 30 caractères, avec seulement des lettres et des tirets</div>
+
+            <?php if (isset($errors['firstName'])): ?>
+                    <div class="error"><?php echo htmlspecialchars($errors['firstName'], ENT_QUOTES); ?></div>
+                <?php endif; ?>
+
           </div>
           <div class="form-group">
             <label for="lastName"></label>
             <input type="text" id="lastName" name="lastName" placeholder="Nom*" required>
             <div id="nameError" class="error">Le nom doit être entre 2 et 30 caractères, avec seulement des lettres et des tirets</div>
+
+            <?php if (isset($errors['lastName'])): ?>
+                    <div class="error"><?php echo htmlspecialchars($errors['lastName'], ENT_QUOTES); ?></div>
+                <?php endif; ?>
+
           </div>
         </div>
         <div class="form-row">
@@ -335,11 +357,21 @@
             <label for="email"></label>
             <input type="email" id="email" name="email" placeholder="Email*" required>
             <div id="emailError" class="error">Veuillez entrer une adresse email valide</div>
+
+            <?php if (isset($errors['email'])): ?>
+                    <div class="error"><?php echo htmlspecialchars($errors['email'], ENT_QUOTES); ?></div>
+                <?php endif; ?>
+
           </div>
           <div class="form-group">
             <label for="tel"></label>
             <input type="tel" id="tel" name="tel" placeholder="Téléphone">
             <div id="telError" class="error">Le téléphone doit contenir exactement 10 chiffres</div>
+
+            <?php if (isset($errors['tel'])): ?>
+                    <div class="error"><?php echo htmlspecialchars($errors['tel'], ENT_QUOTES); ?></div>
+                <?php endif; ?>
+
           </div>
         </div>
         <div class="form-row">
@@ -347,16 +379,23 @@
             <label for="message"></label>
             <textarea id="message" name="message" placeholder="Message*" required></textarea>
             <div id="msgError" class="error">Le message doit contenir entre 5 et 500 mots</div>
+
+            <?php if (isset($errors['message'])): ?>
+                    <div class="error"><?php echo htmlspecialchars($errors['message'], ENT_QUOTES); ?></div>
+                <?php endif; ?>
+
           </div>
         </div>
         <span>*Champs obligatoires</span>
         <div class="clientData">
-          <input type="checkbox" id="acceptData" name="acceptData" required>
+          <input type="checkbox" id="acceptData" name="acceptData" >
           <label for="acceptData">En soumettant ce formulaire, j'accepte que mes données personnelles soient utilisées uniquement pour me recontacter. Pour plus d'informations, veuillez consulter la <a href="">Politique de confidentialité.</a></label>
         </div>
+
         <?php if (isset($errors['acceptData'])): ?>
-        <div class="error"><?php echo $errors['acceptData']; ?></div>
+            <div class="error"><?php echo htmlspecialchars($errors['acceptData'], ENT_QUOTES); ?></div>
         <?php endif; ?>
+        
         <button type="submit" name="send" value="Envoyer">Envoyer</button>
       </form>
    
