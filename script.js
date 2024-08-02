@@ -51,19 +51,19 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Ajout évenement
-    document.getElementById('lastName').addEventListener('input', function() {
-        if (validateName(this.value)) {
-        hideError(this, 'nameError');
-        } else {
-        showError(this, 'nameError');
-        }
-    });
-
     document.getElementById('firstName').addEventListener('input', function() {
         if (validateName(this.value)) {
         hideError(this, 'fNameError');
         } else {
         showError(this, 'fNameError');
+        }
+    });
+    
+    document.getElementById('lastName').addEventListener('input', function() {
+        if (validateName(this.value)) {
+        hideError(this, 'nameError');
+        } else {
+        showError(this, 'nameError');
         }
     });
 
@@ -95,15 +95,15 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function(event) {
         let valid = true;
 
-        if (!validateName(form.lastName.value)) {
-        showError(form.lastName, 'nameError');
-        valid = false;
-        }
-
         if (!validateName(form.firstName.value)) {
         showError(form.firstName, 'fNameError');
         valid = false;
         }
+
+        if (!validateName(form.lastName.value)) {
+            showError(form.lastName, 'nameError');
+            valid = false;
+            }
 
         if (!validateEmail(form.email.value)) {
         showError(form.email, 'emailError');

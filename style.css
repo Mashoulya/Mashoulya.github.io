@@ -29,7 +29,6 @@ h3 {
 body {
   width: 100%;
   font-family: Outfit, Verdana, Tahoma, sans-serif;
-  line-height: 30px;
   background-color: rgba(179, 114, 28, 0.3);
 }
 
@@ -315,6 +314,7 @@ body {
   text-align: justify;
   font-size: clamp(14px, 1.5vw, 20px);
   padding: 10px;
+  line-height: 2;
 }
 .about-me .about-me-text a {
   text-decoration: none;
@@ -489,6 +489,7 @@ h3 {
   text-align: center;
   font-size: clamp(14px, 1.5vw, 20px);
   font-weight: 600;
+  line-height: 1.5;
   margin-bottom: 50px;
 }
 
@@ -527,6 +528,7 @@ h3 {
   list-style: none;
   text-align: center;
   font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 2;
 }
 .services-container .service-type button {
   margin-top: auto;
@@ -654,6 +656,7 @@ h3 {
   margin: 20px auto;
 }
 .prices .price-container .price {
+  line-height: 2;
   background-color: rgba(9, 29, 51, 0.2);
   border: none;
   border-radius: 10px;
@@ -712,9 +715,9 @@ h3 {
   .prices .price-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    line-height: 1.2;
   }
   .prices .price-container .price {
+    line-height: 1.2;
     margin: 5px auto;
     padding: 3px;
   }
@@ -797,6 +800,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1.5;
 }
 .box-contact .contacts p {
   font-size: clamp(14px, 1.5vw, 20px);
@@ -834,7 +838,7 @@ h3 {
 }
 .box-contact .box-formular .form .form-row .form-group {
   flex: 1;
-  margin: 10px;
+  margin: 7px;
 }
 .box-contact .box-formular .form .form-row .form-group label {
   display: block;
@@ -851,6 +855,10 @@ h3 {
 .box-contact .box-formular .form .form-row .form-group textarea {
   height: 100px;
 }
+.box-contact .box-formular .form .form-row .form-group input:focus,
+.box-contact .box-formular .form .form-row .form-group textarea:focus {
+  outline: 2px solid #1b4d3e;
+}
 .box-contact .box-formular .form p {
   font-size: 12px;
   font-style: italic;
@@ -859,7 +867,12 @@ h3 {
   color: rgb(9, 29, 51);
 }
 .box-contact .box-formular .form span {
-  padding: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+.box-contact .box-formular .form .clientData {
+  margin: 5px;
+  font-size: 14px;
 }
 .box-contact .box-formular .form button[type=submit] {
   display: block;
@@ -878,10 +891,8 @@ h3 {
 }
 .box-contact .box-formular .form .error {
   display: none;
-  color: red;
+  color: rgb(189, 2, 2);
   font-size: 12px;
-  font-style: italic;
-  line-height: 1.2;
 }
 
 @media screen and (max-width: 1000px) {

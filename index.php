@@ -312,45 +312,22 @@
 
 <!-- Contact -->
 
-<php
-
-    if(!empty($_POST["send"])){
-        $lastName = $_POST["lastName"];
-        $firstName = $_POST["firstName"];
-        $email = $_POST["email"];
-        $tel = $_POST["tel"];
-        $message = $_POST["message"];
-        $toEmail = "maria.ib2105@gmail.com";
-
-        $mailHeaders = "Name: " . $lastName . " " .$firstName .
-        "\r\n Email: " . $email .
-        "\r\n Tél: " . $tel .
-        "\r\n Message: " . $message . "\r\n";
-
-        if(mail($toEmail, $lastName, $firstName, $mailHeaders)){
-            $msg = "Votre message est envoyé avec succès!";
-        }
-    }
-
-?>
-
-
 <h2 id="my-contact">Vous avez une question?</h2>
   <div class="box-contact">
          
     <div class="box-formular">
 
-      <form method="POST" id="contactForm" class="form">
+      <form method="POST" action="validate_form.php" id="contactForm" class="form">
         <div class="form-row">
-          <div class="form-group">
-            <label for="lastName"></label>
-            <input type="text" id="lastName" name="lastName" placeholder="Nom*" required>
-            <div id="nameError" class="error">Le nom doit contenir uniquement des lettres et des tirets</div>
-          </div>
           <div class="form-group">
             <label for="firstName"></label>
             <input type="text" id="firstName" name="firstName" placeholder="Prénom*" required>
-            <div id="fNameError" class="error">Le prénom doit contenir uniquement des lettres et des tirets</div>
+            <div id="fNameError" class="error">Le prénom doit être entre 2 et 30 caractères, avec seulement des lettres et des tirets</div>
+          </div>
+          <div class="form-group">
+            <label for="lastName"></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Nom*" required>
+            <div id="nameError" class="error">Le nom doit être entre 2 et 30 caractères, avec seulement des lettres et des tirets</div>
           </div>
         </div>
         <div class="form-row">
@@ -373,13 +350,14 @@
           </div>
         </div>
         <span>*Champs obligatoires</span>
+        <div class="clientData">
+          <input type="checkbox" id="acceptData" name="acceptData" required>
+          <label for="acceptData">En soumettant ce formulaire, j'accepte que mes données personnelles soient utilisées uniquement pour me recontacter. Pour plus d'informations, veuillez consulter la <a href="">Politique de confidentialité.</a></label>
+        </div>
+        <?php if (isset($errors['acceptData'])): ?>
+        <div class="error"><?php echo $errors['acceptData']; ?></div>
+        <?php endif; ?>
         <button type="submit" name="send" value="Envoyer">Envoyer</button>
-        <div id="formError" class="error">Veuillez corriger les erreurs dans les champs du formulaire</div>
-        <?php if(!empty($message)){ ?>
-          <div class="success">
-            <strong><?php echo $message; ?> </strong>
-          </div>
-        <?php } ?>
       </form>
    
     </div>
@@ -399,6 +377,7 @@
   
 <footer>
   <span> © Copyright 2023 - Maria Ibragimova. Tous droits réservés.</span> 
+  <span>Politique de confidentialité | Mentions légales</span> 
 </footer>
 
 <script src="script.js"></script>

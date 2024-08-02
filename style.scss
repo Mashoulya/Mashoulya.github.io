@@ -13,7 +13,6 @@
 body{
     width: 100%;
     font-family: Outfit, Verdana, Tahoma, sans-serif;
-    line-height: 30px;
     background-color: $fond-color;
 }
 
@@ -308,7 +307,8 @@ h2{
             margin: 0 auto;
             text-align: justify;
             font-size: clamp(14px, 1.5vw, 20px);
-            padding: 10px
+            padding: 10px;
+            line-height: 2;
         }
         a{
             @extend %important-p;
@@ -500,6 +500,7 @@ h3{
         text-align: center;
         font-size: clamp(14px, 1.5vw, 20px);
         font-weight: 600;
+        line-height: 1.5;
         margin-bottom: 50px;
     }
     .services-container{
@@ -536,6 +537,7 @@ h3{
                 list-style:none;
                 text-align: center;
                 font-size: clamp(14px, 1.5vw, 16px);
+                line-height: 2;
             }
             button{
                 margin-top: auto;
@@ -648,6 +650,7 @@ h3{
         width: 90%;
         margin: 20px auto;
         .price{
+            line-height: 2;
             background-color: rgba(9, 29, 51, 0.2);
             border: none;
             border-radius: 10px;
@@ -712,8 +715,8 @@ h3{
         .price-container {
             grid-template-columns: repeat(2, 1fr);
             gap: 0;
-            line-height: 1.2;
             .price{
+                line-height: 1.2;
                 margin: 5px auto;
                 padding: 3px;
             }
@@ -814,6 +817,7 @@ h3{
         display: flex;
         flex-direction: column;
         align-items: center;
+        line-height: 1.5;
         p{
             font-size: clamp(14px, 1.5vw, 20px);
             font-weight: 600;
@@ -850,7 +854,7 @@ h3{
       
             .form-group {
                 flex: 1;
-                margin: 10px;
+                margin: 7px;
       
                 label {
                     display: block;
@@ -868,6 +872,10 @@ h3{
                 textarea{
                     height: 100px;
                 }
+                input:focus,
+                textarea:focus{
+                    outline: 2px solid #1b4d3e;
+                }
             }
             }
             p{
@@ -878,7 +886,12 @@ h3{
                 color: $main-color;
             }
             span{
-                padding: 10px;
+                padding: 5px;
+                font-size: 12px;
+            }
+            .clientData{
+                margin: 5px;
+                font-size: 14px;
             }
             button[type="submit"] {
             display: block;
@@ -897,10 +910,8 @@ h3{
             }
             .error{
                 display: none;
-                color: red;
+                color: rgb(189, 2, 2);
                 font-size: 12px;
-                font-style: italic;
-                line-height: 1.2;
             }
         }
     }
