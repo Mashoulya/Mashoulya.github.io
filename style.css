@@ -877,8 +877,11 @@ h3 {
   width: calc(100% - 20px);
 }
 .box-contact .box-formular .form .error {
+  display: none;
   color: red;
   font-size: 12px;
+  font-style: italic;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 1000px) {

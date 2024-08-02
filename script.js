@@ -26,65 +26,102 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // VÉRIFICATION DU FORMULAIRE
 
-    document.getElementById('contactForm').addEventListener('click', function(event){
+    const form = document.getElementById('contactForm');
+  
+    const validateName = (name) => {
+        return /^[A-Za-zÀ-ÿ-]+$/.test(name) && name.length >= 2 && name.length <= 30;
+    };
+    const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const validateTel = (tel) => /^\d{10}$/.test(tel);
+    const validateMessage = (message) => {
+    const words = message.trim().split(/\s+/);
+    
+    return words.length >= 5 && words.length <= 500;
+    };
+  
+    // Montrer/cacher erreur
+    const showError = (input, message) => {
+    const errorDiv = document.getElementById(message);
+        errorDiv.style.display = 'block';
+    };
 
-        let hasErrors = false;
-        let nameError = '';
-        let fNameError = '';
-        let emailError = '';
-        let telError = '';
-        let msgError = '';
+    const hideError = (input, message) => {
+    const errorDiv = document.getElementById(message);
+        errorDiv.style.display = 'none';
+    };
 
+    // Ajout évenement
+    document.getElementById('lastName').addEventListener('input', function() {
+        if (validateName(this.value)) {
+        hideError(this, 'nameError');
+        } else {
+        showError(this, 'nameError');
+        }
+    });
 
-        let lastName = document.getElementById('lastName').value.trim();
-        let firstName = document.getElementById('firstName').value.trim();
-        let email = document.getElementById('email').value.trim();
-        let tel = document.getElementById('tel').value.trim();
-        let msg = document.getElementById('message').value.trim();
+    document.getElementById('firstName').addEventListener('input', function() {
+        if (validateName(this.value)) {
+        hideError(this, 'fNameError');
+        } else {
+        showError(this, 'fNameError');
+        }
+    });
 
-        // validation du nom
-        const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\-]+$/;
-        if (!nameRegex.test(lastName)) {
-            nameError = 'Le nom doit contenir uniquement des lettres et des tirets';
-            hasErrors = true;
-          }
-       
-        // validation du prénom
-        if (!nameRegex.test(firstName)) {
-            fNameError = 'Le prénom doit contenir uniquement des lettres et des tirets';
-            hasErrors = true;
-          }
+    document.getElementById('email').addEventListener('input', function() {
+        if (validateEmail(this.value)) {
+        hideError(this, 'emailError');
+        } else {
+        showError(this, 'emailError');
+        }
+    });
 
-        // validation d'email
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        if (!emailRegex.test(email)) {
-            emailError = 'Veuillez entrer une adresse email valide';
-            hasErrors = true;
-          }
+    document.getElementById('tel').addEventListener('input', function() {
+        if (validateTel(this.value)) {
+        hideError(this, 'telError');
+        } else {
+        showError(this, 'telError');
+        }
+    });
 
-        // validation du tél
-        const telRegex = /^0[1-9][0-9]{8}$/;
-        if (tel && !telRegex.test(tel)) {
-          telError = 'Le téléphone doit contenir 10 chiffres';
-          hasErrors = true;
+    document.getElementById('message').addEventListener('input', function() {
+        if (validateMessage(this.value)) {
+        hideError(this, 'msgError');
+        } else {
+        showError(this, 'msgError');
+        }
+    });
+
+    // Soumission du form
+    form.addEventListener('submit', function(event) {
+        let valid = true;
+
+        if (!validateName(form.lastName.value)) {
+        showError(form.lastName, 'nameError');
+        valid = false;
         }
 
-        // Validation du message (min 5 mots, max 500 mots)
-        const messageWords = msg.split(/\s+/).filter(word => word.length > 0);
-        if (messageWords.length < 5 || messageWords.length > 500) {
-            msgError = 'Le message doit contenir entre 5 et 500 mots';
-            hasErrors = true;
+        if (!validateName(form.firstName.value)) {
+        showError(form.firstName, 'fNameError');
+        valid = false;
         }
 
-        // Afficher les erreurs
-        document.getElementById('nameError').innerText = nameError;
-        document.getElementById('fNameError').innerText = fNameError;
-        document.getElementById('emailError').innerText = emailError;
-        document.getElementById('telError').innerText = telError;
-        document.getElementById('msgError').innerText = msgError;
-        
-        if (hasErrors) {
-            event.preventDefault();
+        if (!validateEmail(form.email.value)) {
+        showError(form.email, 'emailError');
+        valid = false;
+        }
+
+        if (form.tel.value && !validateTel(form.tel.value)) {
+        showError(form.tel, 'telError');
+        valid = false;
+        }
+
+        if (!validateMessage(form.message.value)) {
+        showError(form.message, 'msgError');
+        valid = false;
+        }
+
+        if (!valid) {
+        event.preventDefault();
         }
     });
 

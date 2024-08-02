@@ -896,8 +896,11 @@ h3{
             width: calc(100% - 20px);
             }
             .error{
+                display: none;
                 color: red;
                 font-size: 12px;
+                font-style: italic;
+                line-height: 1.2;
             }
         }
     }
