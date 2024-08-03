@@ -954,6 +954,13 @@ footer{
     color: $another-title;
     text-align: center;
     padding: 10px;
+    line-height: 1;
+    p{
+        font-size: clamp(14px, 2vw, 16px);
+        a{
+            color: $another-title;
+        }
+    }
 }
 
 

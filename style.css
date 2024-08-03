@@ -920,6 +920,13 @@ footer {
   color: rgb(106, 207, 177);
   text-align: center;
   padding: 10px;
+  line-height: 1;
+}
+footer p {
+  font-size: clamp(14px, 2vw, 16px);
+}
+footer p a {
+  color: rgb(106, 207, 177);
 }
 
 /*# sourceMappingURL=style.css.map */
