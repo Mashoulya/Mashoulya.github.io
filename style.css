@@ -437,7 +437,7 @@ h3 {
 .skills .skills-item p {
   text-align: center;
   font-weight: bold;
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 16px);
   color: rgb(8, 8, 8);
 }
 
