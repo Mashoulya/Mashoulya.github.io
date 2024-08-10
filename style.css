@@ -314,7 +314,7 @@ body {
   text-align: justify;
   font-size: clamp(14px, 1.5vw, 20px);
   padding: 10px;
-  line-height: 2;
+  line-height: 1.8;
 }
 .about-me .about-me-text a {
   text-decoration: none;
