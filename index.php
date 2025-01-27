@@ -307,9 +307,9 @@ unset($_SESSION['submittedData']);
           
     <div class="cartes-portfolio">
       <div class="img-portfolio">
-        <img src="img/page d'accueil.jpg" alt="">
+        <img src="img/0-day.png" alt="0-day">
       </div> 
-      <p>Futur projet.</p>
+      <p>Jeu de cartes 0-DAY (projet imaginaire)</p>
     </div>
          
     <div class="cartes-portfolio">
